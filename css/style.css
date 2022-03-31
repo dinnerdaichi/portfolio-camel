@@ -388,6 +388,9 @@ button:focus {
 /*===========================
         6.SERVICES
 =============================*/
+.pt{
+  padding-top: 0;
+}
 
 .services-boxes {
     border: 1px solid #e8e8e8;
@@ -494,7 +497,14 @@ button:focus {
 
 .service hr {
     width: 5rem;
+    
 }
+
+hr{
+  border-top: 3px solid rgb(255, 84, 84)!important;
+}
+
+
 
 .lp {
     padding-bottom: 2rem;
@@ -686,6 +696,25 @@ button:focus {
     text-align: center;
 }
 
+/*===========================
+      other
+=============================*/
+.link{
+  color: black;
+  padding: 10px 10px 30px;
+  display: block;
+}
+
+.fa-solid{
+  margin-left: 5px;
+  color: #cc0066;
+}
+
+.basic{
+  color: #cc0066;
+  margin-top: 10px;
+  font-weight: bold;
+}
 /*===========================
         11.RESPONSIVE
 =============================*/
