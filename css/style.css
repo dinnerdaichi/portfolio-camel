@@ -448,6 +448,7 @@ header {
   .about_text p,
   .camel_text p {
     letter-spacing: 0px;
+    overflow-wrap: normal;
   }
   .about_item {
     padding: 5px;
