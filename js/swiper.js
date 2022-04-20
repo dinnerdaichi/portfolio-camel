@@ -11,11 +11,18 @@ const swiper = new Swiper(".swiper", {
   	  clickable: true
   	},
     loop:true,
-    slidesPerView: 1.5,
+
+    slidesPerView: 1,
     spaceBetween: 20,
     centeredSlides: true,
     speed:800,
     
+    breakpoints:{
+      481:{
+    slidesPerView: 1.5,
+
+      }
+    }
 
     	// autoplay: {
     	//   // スライドが動く間隔。(これなら3秒)
