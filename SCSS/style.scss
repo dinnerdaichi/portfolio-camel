@@ -56,7 +56,7 @@ body {
 
 @media screen and (max-width: 480px) {
   .inner {
-    padding: 0 30px;
+    padding: 0 20px;
   }
 
   .top_inner {
@@ -272,7 +272,7 @@ header {
     width: 100%;
     opacity: 0.75;
 
-    animation: animationZoom 10s ease-in-out infinite;
+    animation: animationZoom 20s ease-in-out infinite;
   }
 }
 
@@ -317,7 +317,7 @@ header {
   }
 
   .main_title {
-    padding: 30px;
+    padding: 20px;
     position: static;
   }
 
