@@ -202,8 +202,7 @@ header {
   }
   .sp_header {
     display: block;
-    position: absolute;
-    top: 0;
+    position: fixed;
     right: -250px;
     z-index: 100;
     background-color: #81ccdcdb;
@@ -222,22 +221,22 @@ header {
     opacity: 0.4;
   }
   .sp_header.active {
-    position: absolute;
+    position: fixed;
     right: 0;
     z-index: 200;
   }
   .sp_btn {
     display: block;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 20px;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    width: 30px;
     z-index: 200;
     -webkit-transition: 1s;
     transition: 1s;
   }
   .sp_btn.active {
-    position: absolute;
+    position: fixed;
     right: 500px;
   }
   .nav_items {
