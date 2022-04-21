@@ -100,16 +100,16 @@ a:hover {
   }
 }
 
-.section_tit {
+.title {
   font-size: 50px;
 }
 
 @media screen and (max-width: 480px) {
-  .section_tit {
+  .title {
     font-size: 30px;
   }
 
-  .section_sub {
+  .sub_title {
     margin-left: 5px;
   }
 }
@@ -214,6 +214,7 @@ header {
     background-color: #81ccdcdb;
     width: 250px;
     height: 1000px;
+    transition: 0.6s;
   }
 
   .sp_back.active {
@@ -236,6 +237,14 @@ header {
 
 
 
+  }
+
+  .sp_btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    z-index: 100;
   }
 
   .nav_items {
@@ -313,11 +322,11 @@ header {
   }
 
   .main_title_l {
-    font-size: 50px;
+    font-size: 40px;
   }
 
   .main_title_s {
-    font-size: 30px;
+    font-size: 20px;
   }
 
   .main_message_p {
