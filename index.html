@@ -17,6 +17,7 @@
   <link href="css/style.css" rel="stylesheet">
   <link href="css/reset.css" rel="stylesheet">
   <link href="css/swiper.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/animate.css">
   <link rel="icon" href="favicon.ico">
 
 
@@ -30,17 +31,16 @@
   <script src="https://kit.fontawesome.com/b2fc223adf.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 
+
 </head>
 
 <body>
-
-  <!-- Loader -->
-  <div id="preloader">
-    <div id="status">
-      <div class="spinner">Loading...</div>
-    </div>
+  <div class="loading">
+    <img src="images/camel.png" alt="">
   </div>
 
+  <!-- Loader -->
+<div class="sp_back"></div>
 
 
   <!-- START HOME -->
@@ -53,7 +53,6 @@
         <div class="header_logo">
           <a href="#">
             <img src="./images/camel.png" alt="">
-
           </a>
         </div>
         <div class="header_nav">
@@ -67,26 +66,46 @@
       </div>
     </div>
 
+
   </header>
+
+
 
   <!-- End Navbar -->
   <section class="section main">
+
     <div class="inner top_inner">
       <div class="main_contents">
+        <div class="sp_header">
+          <div class="sp_menu">
+            <ul class="nav_items">
+              <li class="nav_item"><a href="#about"><img src="./images/camel.png" alt=""></a></li>
+              <li class="nav_item"><a href="#about">ABOUT</a></li>
+              <li class="nav_item"><a href="#skills">SKILLS</a></li>
+              <li class="nav_item"><a href="#work">WORKS</a></li>
+              <li class="nav_item"><a href="#contact">CONTACT</a></li>
+            </ul>
+          </div>
+        </div>
         <div class="main_img">
+
           <img src="./images/header_img.jpg" alt="">
         </div>
         <div class="main_title">
-          <p class="main_title_l">Daichi</p>
-          <p class="main_title_s">Web creater & designer</p>
+          <p class="main_title_l wow fadeInUp">Daichi</p>
+          <p class="main_title_s wow fadeInUp">Web creater & designer</p>
           <div class="message_flex">
             <p class="main_message_p">お客様のイメージをカタチに</p>
             <div class="line"></div>
           </div>
           <p class="sub_message_p">コミュニケーションをなにより大切にし、<br>お客様の理想に全力で取り組み、共にゴールを目指します。</p>
         </div>
+
+
       </div>
     </div>
+
+
   </section>
 
 
@@ -97,9 +116,9 @@
   <section class="section work" id="works">
     <div class="inner">
       <div class="work_contents">
-        <div class="section_tit">WORKS</div>
-        <div class="section_sub">制作物</div>
-        <div class="swiper_contents">
+        <div class="section_tit wow fadeInUp">WORKS</div>
+        <div class="section_sub wow fadeInUp">制作物</div>
+        <div class="swiper_contents wow fadeInUp">
           <div class="swiper">
             <!-- 必要に応じたwrapper -->
             <div class="swiper-wrapper">
@@ -156,11 +175,11 @@
   <section class="section skills" id="skills">
     <div class="inner">
       <div class="skill_contents">
-        <div class="section_tit skill_tit">SKILLS</div>
-        <div class="section_sub">出来ること</div>
+        <div class="section_tit skill_tit wow fadeInUp">SKILLS</div>
+        <div class="section_sub wow fadeInUp">出来ること</div>
         <div class="skill_items">
 
-          <div class="skill_item">
+          <div class="skill_item wow fadeInLeft">
             <div class="skill_img">
               <i class="fa-solid fa-laptop-code font_awesome"></i>
               <!-- <img src="./images/coding.png" alt=""> -->
@@ -170,7 +189,7 @@
               <p class="skill_text">html/css Javascriptを使い、デザインカンプに正確かつ忠実にコーディンします。<br>レスポンシブ対応やjQueryを用いたアニメーションも実装可能です。</p>
             </div>
           </div>
-          <div class="skill_item">
+          <div class="skill_item wow fadeInRight">
             <div class="skill_img_right">
               <i class="fa-brands fa-wordpress font_awesome"></i>
               <!-- <img src="./images/coding.png" alt=""> -->
@@ -180,7 +199,7 @@
               <p class="skill_text">WordPressを使用したWebサイト構築。<br>オリジナルテーマの開発や既存のテンプレートの修正や変更も承ります。</p>
             </div>
           </div>
-          <div class="skill_item">
+          <div class="skill_item wow fadeInLeft">
             <div class="skill_img">
               <!-- <img src="./images/coding.png" alt=""> -->
               <i class="fa-solid fa-paintbrush font_awesome2"></i>
@@ -204,14 +223,14 @@
   <!-- skills end-->
 
   <!-- about -->
-  <section class="section about" id="about">
+  <section class="section about" id="about" data-wow-offset="100">
     <div class="inner">
       <div class="about_contents">
-        <div class="section_tit">ABOUT ME</div>
-        <div class="section_sub">私について</div>
+        <div class="section_tit  wow fadeInUp">ABOUT ME</div>
+        <div class="section_sub  wow fadeInUp">私について</div>
 
         <div class="about_items">
-          <div class="profile">
+          <div class="profile wow fadeInUp">
             <div class="about_img"><img src="./images/IMG_5106.JPG" alt=""></div>
             <div class="about_name">
               <h3>CAMEL 代表</h3>
@@ -222,7 +241,7 @@
               </div>
             </div>
           </div>
-          <div class="about_item">
+          <div class="about_item wow fadeInUp">
             <div class="about_texts">
               <div class="about_tit">
                 <h3>
@@ -254,7 +273,7 @@
 
 
   <!-- contact -->
-  <section class="section contact" id="contact">
+  <section class="section contact wow fadeInUp" id="contact">
     <div class="inner">
       <div class="contact_contents">
         <div class="section_tit">CONTACT</div>
@@ -286,28 +305,14 @@
 
 
   <!-- JAVASCRIPTS -->
-  <script src="js/jquery.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-
-  <!--EASING JS-->
-  <script src="js/jquery.easing.min.js"></script>
-  <script src="js/scrollspy.min.js"></script>
-  <!--PORTFOLIO FILTER JS-->
-  <script src="js/isotope.js"></script>
-  <!-- Magnific Popup Js -->
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <!-- TYPED -->
-  <script src="js/typed.js"></script>
-  <!--PARTICLES ANIMATE JS-->
-  <script src="js/particles.js"></script>
-  <script src="js/particles.app.js"></script>
-  <!-- OWL CAROUSEL -->
-  <script src="js/owl.carousel.min.js"></script>
-  <!--CUSTOM JS-->
-  <script src="js/custom.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
   <script src="js/swiper.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/wow.min.js" type="text/javascript"></script>
+  <script>
+    new WOW().init();
+  </script>
 </body>
 
 </html>
