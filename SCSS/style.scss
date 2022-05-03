@@ -243,7 +243,7 @@ header {
 
   .sp_menu {
     // background-color: rgb(183, 208, 235);
-
+    height: 100%;
 
 
   }
@@ -264,21 +264,30 @@ header {
     position: fixed;
     right: 500px;
   }
- 
+
 
   .nav_items {
     display: block;
     font-size: 30px;
+    width: 100%;
     padding: 0;
-    margin-left: 20px;
+   position: absolute;
+   top: 15%;
+
     a {
       color: white;
+      width: 100%;
+      display: block;
+      padding-left: 30px;
     }
   }
 
-  .nav_item{
+  .nav_item {
     margin-bottom: 15px;
+    // padding: 30px;
+    width: 100%;
     padding: 0;
+
   }
 
   .nav_item img {
@@ -286,7 +295,7 @@ header {
   }
 }
 
-.hide_btn{
+.hide_btn {
   list-style: none;
   font-size: 80px;
   color: white;
@@ -599,7 +608,7 @@ header {
   margin: 40px 0 20px;
   letter-spacing: 1.4px;
 
-  img{
+  img {
     display: none;
     width: 24px;
     vertical-align: bottom;
@@ -607,7 +616,7 @@ header {
     // top: -15px;
     // right: 77px;
     // transform:rotate(25deg)
-    }
+  }
 }
 
 .camel_text {
@@ -632,9 +641,10 @@ header {
     padding: 5px;
   }
 
-  .camel_tit{
+  .camel_tit {
     img {
       display: inline;
+      margin-left: 10px;
     }
   }
 }

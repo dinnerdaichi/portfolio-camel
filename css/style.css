@@ -225,6 +225,9 @@ header {
     right: 0;
     z-index: 200;
   }
+  .sp_menu {
+    height: 100%;
+  }
   .sp_btn {
     display: block;
     position: fixed;
@@ -242,14 +245,20 @@ header {
   .nav_items {
     display: block;
     font-size: 30px;
+    width: 100%;
     padding: 0;
-    margin-left: 20px;
+    position: absolute;
+    top: 15%;
   }
   .nav_items a {
     color: white;
+    width: 100%;
+    display: block;
+    padding-left: 30px;
   }
   .nav_item {
     margin-bottom: 15px;
+    width: 100%;
     padding: 0;
   }
   .nav_item img {
@@ -576,6 +585,7 @@ header {
   }
   .camel_tit img {
     display: inline;
+    margin-left: 10px;
   }
 }
 
