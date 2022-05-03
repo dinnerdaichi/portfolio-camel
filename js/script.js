@@ -1,7 +1,7 @@
 $(function () {
 
 
-
+// ハンバーガーメニュー
   $(".sp_btn").click(function () {
 
     $(".sp_btn").addClass('active');
@@ -22,6 +22,8 @@ $(function () {
     $(".loading").addClass("hide");
   });
 
+
+  // スムーススクロール
   $('a[href^="#"]').click(function () {
     var href = $(this).attr("href");
     var target = $(href == "#" || href == "" ? 'html' : href);
@@ -32,5 +34,22 @@ $(function () {
     }, speed, "swing");
     return false;
   });
+
+
+  // modal
+  $(".swiper_modal1").click(function(){
+    $(".modal1,.modal_back").fadeIn();
+  }),
+  $(".close").click(function(){
+    $(".modal1,.modal_back").fadeOut();
+  })
+  $(".swiper_modal2").click(function(){
+    $(".modal2,.modal_back").fadeIn();
+  }),
+  $(".close").click(function(){
+    $(".modal2,.modal_back").fadeOut();
+  })
+
+
 
 });
