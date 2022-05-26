@@ -1,7 +1,7 @@
 $(function () {
 
 
-// ハンバーガーメニュー
+  // ハンバーガーメニュー
   $(".sp_btn").click(function () {
 
     $(".sp_btn").addClass('active');
@@ -27,7 +27,7 @@ $(function () {
   $('a[href^="#"]').click(function () {
     var href = $(this).attr("href");
     var target = $(href == "#" || href == "" ? 'html' : href);
-    var position = target.offset().top -50;
+    var position = target.offset().top - 50;
     var speed = 800;
     $("html, body").animate({
       scrollTop: position
@@ -37,18 +37,25 @@ $(function () {
 
 
   // modal
-  $(".swiper_modal1").click(function(){
-    $(".modal1,.modal_back").fadeIn();
-  }),
-  $(".close").click(function(){
-    $(".modal1,.modal_back").fadeOut();
-  })
-  $(".swiper_modal2").click(function(){
-    $(".modal2,.modal_back").fadeIn();
-  }),
-  $(".close").click(function(){
-    $(".modal2,.modal_back").fadeOut();
-  })
+  $(".swiper_modal1").click(function () {
+      $(".modal1,.modal_back").fadeIn();
+    }),
+    $(".close").click(function () {
+      $(".modal1,.modal_back").fadeOut();
+    })
+  $(".swiper_modal2").click(function () {
+      $(".modal2,.modal_back").fadeIn();
+    }),
+    $(".close").click(function () {
+      $(".modal2,.modal_back").fadeOut();
+    }),
+    $(document).click(function (event) {
+      var target = $(event.target);
+
+      if (target.hasClass('modal1,modal2')) {
+        target.fadeOut();
+      }
+    });
 
 
 
