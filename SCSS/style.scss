@@ -247,6 +247,10 @@ header {
 .header_inner {
   padding: 20px 150px;
 
+  @include mq('sp'){
+    padding: 20px 20px;
+  }
+
 
 }
 
