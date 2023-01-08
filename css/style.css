@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
   overflow-x: hidden;
   padding-top: 100px;
   position: relative;
@@ -20,7 +20,7 @@ body {
   width: 100%;
   height: 100%;
   z-index: 99;
-  background-color: #6d6d6db5;
+  background-color: rgba(109, 109, 109, 0.7098039216);
 }
 
 .modal1,
@@ -35,12 +35,10 @@ body {
   padding: 30px 30px 0;
   z-index: 100;
 }
-
 .modal1 p,
 .modal2 p {
   line-height: 1.3rem;
 }
-
 .modal1 a,
 .modal2 a {
   display: block;
@@ -88,7 +86,6 @@ body {
   z-index: 100;
   background-color: white;
 }
-
 .loading img {
   width: 30px;
   height: 30px;
@@ -96,6 +93,27 @@ body {
   position: absolute;
   top: 50vh;
   left: 50%;
+}
+
+.logo_fadein {
+  background: #FFF;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 999;
+}
+
+.logo_fadein p {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: none;
+  z-index: 9999;
+  width: 280px;
 }
 
 .hide {
@@ -107,11 +125,15 @@ body {
     padding-top: 0;
   }
 }
-
 .inner {
   max-width: 1080px;
   margin: 0 auto;
   padding: 0 150px;
+}
+@media screen and (max-width: 767px) {
+  .inner {
+    padding: 0 30px;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -122,7 +144,6 @@ body {
     padding: 0;
   }
 }
-
 img {
   width: 100%;
 }
@@ -158,7 +179,6 @@ a:hover {
     display: none;
   }
 }
-
 .title {
   font-size: 50px;
 }
@@ -171,7 +191,6 @@ a:hover {
     margin-left: 5px;
   }
 }
-
 #home {
   margin-top: 0;
 }
@@ -248,7 +267,7 @@ header {
   display: none;
   width: 100%;
   height: 100%;
-  background-color: #575757;
+  background-color: rgb(87, 87, 87);
   z-index: 100;
   position: absolute;
   opacity: 0.4;
@@ -272,7 +291,7 @@ header {
     position: fixed;
     right: -250px;
     z-index: 100;
-    background-color: #81ccdc91;
+    background-color: rgba(129, 204, 220, 0.568627451);
     width: 250px;
     height: 1000px;
     -webkit-transition: 0.6s;
@@ -282,7 +301,7 @@ header {
     display: block;
     width: 100%;
     height: 100%;
-    background-color: #575757;
+    background-color: rgb(87, 87, 87);
     z-index: 100;
     position: absolute;
     opacity: 0.4;
@@ -332,7 +351,6 @@ header {
     width: 30px;
   }
 }
-
 .hide_btn {
   list-style: none;
   font-size: 80px;
@@ -345,7 +363,6 @@ header {
   max-width: 500px;
   margin-left: auto;
 }
-
 .main_img img {
   display: block;
   width: 100%;
@@ -413,27 +430,23 @@ header {
     font-size: 14px;
   }
 }
-
 @-webkit-keyframes animationZoom {
   50% {
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
   }
 }
-
 @keyframes animationZoom {
   50% {
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
   }
 }
-
 .main_message {
   width: 100%;
   font-size: 24px;
   letter-spacing: 5px;
 }
-
 .main_message p {
   margin: 10px 0 0;
 }
@@ -448,7 +461,6 @@ header {
     margin: 10px 0 0;
   }
 }
-
 .sub_message {
   margin-top: 50px;
   font-size: 18px;
@@ -518,12 +530,10 @@ header {
 .skill_texts {
   width: 55%;
 }
-
 .skill_texts h3 {
   font-size: 24px;
   margin-bottom: 10px;
 }
-
 .skill_texts p {
   font-size: 18px;
   line-height: 30px;
@@ -554,7 +564,6 @@ header {
     margin-top: 20px;
   }
 }
-
 /*===========================
       about
 =============================*/
@@ -573,7 +582,6 @@ header {
 .about_img {
   margin-left: 20px;
 }
-
 .about_img img {
   border-radius: 10px;
 }
@@ -581,11 +589,9 @@ header {
 .about_name {
   margin-left: 40px;
 }
-
 .about_name h3 {
   font-size: 20px;
 }
-
 .about_name p {
   margin-top: 20px;
   font-size: 30px;
@@ -615,7 +621,6 @@ header {
 .about_text {
   line-height: 30px;
 }
-
 .about_text p {
   font-weight: normal;
   letter-spacing: 1.4px;
@@ -626,7 +631,6 @@ header {
   margin: 40px 0 20px;
   letter-spacing: 1.4px;
 }
-
 .camel_tit img {
   display: none;
   width: 24px;
@@ -636,7 +640,6 @@ header {
 .camel_text {
   line-height: 30px;
 }
-
 .camel_text p {
   font-weight: normal;
   letter-spacing: 1.4px;
@@ -644,7 +647,7 @@ header {
 
 @media screen and (max-width: 480px) {
   .about_text p,
-  .camel_text p {
+.camel_text p {
     letter-spacing: 0px;
     overflow-wrap: normal;
   }
@@ -656,7 +659,6 @@ header {
     margin-left: 10px;
   }
 }
-
 /*===========================
       contact.
 =============================*/
@@ -669,7 +671,7 @@ header {
 
 .twitter_icon {
   font-size: 5rem;
-  color: #81ccdc91;
+  color: rgba(129, 204, 220, 0.568627451);
   margin-top: 30px;
 }
 
@@ -681,12 +683,11 @@ header {
     font-size: 14px;
   }
 }
-
 /*===========================
       footer
 =============================*/
 footer {
-  background-color: #81addc91;
+  background-color: rgba(129, 173, 220, 0.568627451);
   height: 100px;
   width: 100%;
   display: -webkit-box;
@@ -710,12 +711,12 @@ footer {
 =============================*/
 .font_awesome {
   font-size: 7em;
-  color: #81ccdc91;
+  color: rgba(129, 204, 220, 0.568627451);
 }
 
 .font_awesome2 {
   font-size: 5em;
-  color: #81ccdc91;
+  color: rgba(129, 204, 220, 0.568627451);
 }
 
 /*===========================
@@ -738,7 +739,6 @@ footer {
 .swiper-slide {
   position: relative;
 }
-
 .swiper-slide img {
   border-radius: 15px;
 }
@@ -754,7 +754,7 @@ footer {
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #81ccdc91 !important;
+  background-color: rgba(129, 204, 220, 0.568627451) !important;
 }
 
 .swiper-slide-next {
@@ -768,7 +768,6 @@ footer {
 .swiper_p_sub {
   margin-top: 5px;
 }
-
 .swiper_p_sub p {
   font-size: 12px;
 }
@@ -785,7 +784,7 @@ footer {
   width: 100%;
   height: 100%;
   z-index: 99;
-  background-color: #6d6d6db5;
+  background-color: rgba(109, 109, 109, 0.7098039216);
 }
 
 .modal1,
@@ -800,12 +799,10 @@ footer {
   padding: 30px 30px 0;
   z-index: 100;
 }
-
 .modal1 p,
 .modal2 p {
   line-height: 1.3rem;
 }
-
 .modal1 a,
 .modal2 a {
   display: block;
@@ -853,7 +850,7 @@ footer {
     width: 100%;
     height: 100%;
     z-index: 99;
-    background-color: #6d6d6db5;
+    background-color: rgba(109, 109, 109, 0.7098039216);
   }
   .modal1, .modal2 {
     display: none;

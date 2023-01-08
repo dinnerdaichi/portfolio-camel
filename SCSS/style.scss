@@ -4,6 +4,24 @@
 $base:#81ccdc91;
 $base2:#81addc91;
 
+
+$breakpoints: (
+  'sp': 'screen and (max-width: 767px)', //767px以下（スマホ）用の表示
+  'pc': 'screen and (min-width: 768px)'
+) !default;
+
+@mixin mq($breakpoint: sp) {
+@media #{map-get($breakpoints,$breakpoint)} {
+@content;
+}
+}
+
+
+
+
+
+
+
 * {
   box-sizing: border-box;
 }
@@ -104,6 +122,27 @@ body {
   }
 }
 
+.logo_fadein {
+  background: #FFF;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 999;
+}
+
+.logo_fadein p {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  z-index: 9999;
+  width: 280px;
+}
+
+
 .hide {
   display: none;
 }
@@ -120,7 +159,13 @@ body {
   margin: 0 auto;
   padding: 0 150px;
   // background-color: red;
+
+  @include mq('sp'){
+    padding: 0 30px;
+  }
 }
+
+
 
 @media screen and (max-width: 480px) {
   .inner {
