@@ -42,7 +42,7 @@ $(function () {
     }),
     $(".close").click(function () {
       $(".modal1,.modal_back").fadeOut();
-    })
+    }),
   $(".swiper_modal2").click(function () {
       $(".modal2,.modal_back").fadeIn();
     }),
