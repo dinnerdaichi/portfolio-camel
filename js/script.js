@@ -49,10 +49,16 @@ $(function () {
     $(".close").click(function () {
       $(".modal2,.modal_back").fadeOut();
     }),
+  $(".swiper_modal3").click(function () {
+      $(".modal3,.modal_back").fadeIn();
+    }),
+    $(".close").click(function () {
+      $(".modal3,.modal_back").fadeOut();
+    }),
     $(document).click(function (event) {
       var target = $(event.target);
 
-      if (target.hasClass('modal1,modal2')) {
+      if (target.hasClass('modal1,modal2,modal3')) {
         target.fadeOut();
       }
     });
