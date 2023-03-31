@@ -75,6 +75,16 @@ $(document).click(function (event) {
   if (target.hasClass('modal3')) {
     $(".modal3,.modal_back").fadeOut();
   }
+
+  if (target.hasClass('close')) {
+    $(".modal1,.modal_back").fadeOut();
+  }
+  if (target.hasClass('close')) {
+    $(".modal2,.modal_back").fadeOut();
+  }
+  if (target.hasClass('close')) {
+    $(".modal3,.modal_back").fadeOut();
+  }
 });
 
 
