@@ -37,32 +37,45 @@ $(function () {
 
 
   // modal
-  $(".swiper_modal1").click(function () {
-      $(".modal1,.modal_back").fadeIn();
-    }),
-    $(".close").click(function () {
-      $(".modal1,.modal_back").fadeOut();
-    }),
-  $(".swiper_modal2").click(function () {
-      $(".modal2,.modal_back").fadeIn();
-    }),
-    $(".close").click(function () {
-      $(".modal2,.modal_back").fadeOut();
-    }),
-  $(".swiper_modal3").click(function () {
-      $(".modal3,.modal_back").fadeIn();
-    }),
-    $(".close").click(function () {
-      $(".modal3,.modal_back").fadeOut();
-    }),
-    $(document).click(function (event) {
-      var target = $(event.target);
+$(".swiper_modal1").click(function () {
+  $(".modal1,.modal_back").fadeIn();
+});
 
-      if (target.hasClass('modal1,modal2,modal3')) {
-        target.fadeOut();
-      }
-    });
+$(".close1").click(function () {
+  $(".modal1,.modal_back").fadeOut();
+});
 
+$(".swiper_modal2").click(function () {
+  $(".modal2,.modal_back").fadeIn();
+});
+
+$(".close2").click(function () {
+  $(".modal2,.modal_back").fadeOut();
+});
+
+$(".swiper_modal3").click(function () {
+  $(".modal3,.modal_back").fadeIn();
+});
+
+$(".close3").click(function () {
+  $(".modal3,.modal_back").fadeOut();
+});
+
+$(document).click(function (event) {
+  var target = $(event.target);
+
+  if (target.hasClass('modal1')) {
+    $(".modal1,.modal_back").fadeOut();
+  }
+
+  if (target.hasClass('modal2')) {
+    $(".modal2,.modal_back").fadeOut();
+  }
+
+  if (target.hasClass('modal3')) {
+    $(".modal3,.modal_back").fadeOut();
+  }
+});
 
 $(function () {
   setTimeout(function () {
