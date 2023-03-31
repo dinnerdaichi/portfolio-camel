@@ -77,6 +77,8 @@ $(document).click(function (event) {
   }
 });
 
+
+
 $(function () {
   setTimeout(function () {
     $('.logo_fadein p').fadeIn(1000);
