@@ -37,11 +37,13 @@ body {
   z-index: 100;
 }
 .modal1 p,
-.modal2 p {
+.modal2 p,
+.modal3 p {
   line-height: 1.3rem;
 }
 .modal1 a,
-.modal2 a {
+.modal2 a,
+.modal3 a {
   display: block;
   color: white;
   margin-top: 20px;
