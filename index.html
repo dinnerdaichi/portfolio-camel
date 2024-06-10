@@ -36,10 +36,10 @@
 
 <body>
 
-<div class="logo_fadein">
-  
-  <p><img src="images/camel.png" alt=""></p>
-</div>
+  <div class="logo_fadein">
+
+    <p><img src="images/camel.png" alt=""></p>
+  </div>
 
   <div class="loading">
     <img src="images/camel.png" alt="">
@@ -63,9 +63,9 @@
         </div>
         <div class="header_nav">
           <ul class="nav_items">
-            <li class="nav_item"><a href="#about">ABOUT</a></li>
-            <li class="nav_item"><a href="#skills">SKILLS</a></li>
             <li class="nav_item"><a href="#works">WORKS</a></li>
+            <li class="nav_item"><a href="#skills">SKILLS</a></li>
+            <li class="nav_item"><a href="#about">ABOUT</a></li>
             <li class="nav_item"><a href="#contact">CONTACT</a></li>
           </ul>
         </div>
@@ -88,9 +88,9 @@
           <div class="sp_menu">
             <ul class="nav_items">
               <!-- <li class="nav_item"><a href="#about"><img src="./images/camel.png" alt=""></a></li> -->
-              <li class="nav_item"><a href="#about" class="links">ABOUT</a></li>
-              <li class="nav_item"><a href="#skills" class="links">SKILLS</a></li>
               <li class="nav_item"><a href="#works" class="links">WORKS</a></li>
+              <li class="nav_item"><a href="#skills" class="links">SKILLS</a></li>
+              <li class="nav_item"><a href="#about" class="links">ABOUT</a></li>
               <li class="nav_item"><a href="#contact" class="links">CONTACT</a></li>
               <li class="hide_btn">→</li>
             </ul>
@@ -130,75 +130,39 @@
           <p class="sub_title">制作物</p>
         </div>
         <div class="swiper_contents wow fadeInUp">
-          <!-- modal -->
-          <div class="modal_back"></div>
-          <!-- <div class="modal1">
-            <p>・歯医者をイメージしたHP。<br>・デザインカンプ（XD）からコーディング<br>・コーディング期間2週間<br>※偏移先と同じものを作成しました。<a href="https://clinic.showtaki.com/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square modal-icon"></i></a><span class="demo">user,pass「demo」</span></p>
-            <i class="fa-solid fa-xmark close"></i>
-          </div> -->
 
-          <div class="modal_back"></div>
-          <!-- <div class="modal2">
-            <p>・カフェをイメージしたHP<br>・デザインカンプ（XD）からコーディング<br>・コーディング期間2週<br>・※偏移先と同じものを作成しました。</p>
-            <div class="modal_link">
-              <a href="https://cafe.showtaki.com/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square modal-icon"></i></a>
-            </div>
-            <p class="demo">user,pass「demo」</p>
-            <i class="fa-solid fa-xmark close"></i>
-          </div> -->
-
-          <div class="modal_back"></div>
-          <div class="modal3">
-            <p>・医療系ホームページのイメージ</p>
-            <div class="modal_link">
-              <a href="./links/medi-html/index.html" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square modal-icon"></i></a>
-            </div>
-            <i class="fa-solid fa-xmark close"></i>
-          </div>
 
 
           <!-- modal end -->
           <div class="swiper">
             <!-- 必要に応じたwrapper -->
             <div class="swiper-wrapper">
-              <!-- スライド -->
-              <!-- <div class="swiper-slide swiper_modal1">
-                <img src="./images/works/swiper1.png" alt="">
 
-                <div class="swiper_p">
-                  <p>歯医者のHP（イメージ）</p>
-                </div>
-                <div class="swiper_p_sub">
-                  <p>HTML/CSS、jQuery、WordPress</p>
-                </div>
-              </div> -->
-              <!-- <div class="swiper-slide swiper_modal2">
-                <img src="./images/works/swiper2.png" alt="">
-                <div class="swiper_p">
-                  <p>カフェのHP（イメージ）</p>
-                </div>
-                <div class="swiper_p_sub">
-                  <p>HTML/CSS、jQuery、WordPress</p>
-                </div>
-              </div> -->
+
               <div class="swiper-slide">
-                <img src="./images/works/swiper4.png" alt="">
-                <div class="swiper_p">
-                  <p>当サイト</p>
-                </div>
-                <div class="swiper_p_sub">
-                  <p>HTML/CSS、jQuery</p>
-                </div>
+                <a href="">
+                  <img src="./images/works/mysite.png" alt="">
+                  <div class="swiper_p">
+                    <p>当サイト</p>
+                  </div>
+                  <div class="swiper_p_sub">
+                    <p>HTML/CSS、jQuery</p>
+                  </div>
+                </a>
               </div>
+
               <div class="swiper-slide swiper_modal3">
-                <img src="./images/works/swiper3.png" alt="">
-                <div class="swiper_p">
-                  <p>医療系HP</p>
-                </div>
-                <div class="swiper_p_sub">
-                  <p>HTML/CSS、jQuery</p>
-                </div>
+                <a href="https://politeliving2022.com/homepage/" target="_blank">
+                  <img src="./images/works/politeliving.png" alt="">
+                  <div class="swiper_p">
+                    <p>ココナラでの制作サイト</p>
+                  </div>
+                  <div class="swiper_p_sub">
+                    <p>デザイン〜Wordpressでのオリジナルテーマ構築</p>
+                  </div>
+                </a>
               </div>
+
             </div>
             <div class="swiper-pagination"></div>
             <!-- ナビゲーションボタン（※省略可） -->
@@ -237,19 +201,21 @@
             </div>
             <div class="skill_texts">
               <h3 class="skill_tit">コーディング</h3>
-              <p class="skill_text">html/css Javascriptを使い、デザインカンプに正確かつ忠実にコーディンします。<br>レスポンシブ対応やjQueryを用いたアニメーションも実装可能です。</p>
+              <p class="skill_text">html/css、Javascriptを使い、デザインカンプに正確かつ忠実にコーディンします。<br>レスポンシブ対応やjQueryを用いたアニメーションも実装可能です。</p>
             </div>
           </div>
+
           <div class="skill_item wow fadeInUp">
             <div class="skill_img_right">
               <i class="fa-brands fa-wordpress font_awesome"></i>
               <!-- <img src="./images/coding.png" alt=""> -->
             </div>
             <div class="skill_texts">
-              <h3 class="skill_tit">WordPress構築・カスタマイズ</h3>
+              <h3 class="skill_tit">WordPress構築<br>カスタマイズ</h3>
               <p class="skill_text">WordPressを使用したWebサイト構築。<br>オリジナルテーマの開発や既存のテンプレートの修正や変更も承ります。</p>
             </div>
           </div>
+
           <div class="skill_item wow fadeInUp">
             <div class="skill_img">
               <!-- <img src="./images/coding.png" alt=""> -->
@@ -258,6 +224,17 @@
             <div class="skill_texts">
               <h3 class="skill_tit">Webデザイン</h3>
               <p class="skill_text">お客様のイメージをカタチにするだけではなく、機能面も考慮したデザインを提案させて頂きます。</p>
+            </div>
+          </div>
+
+          <div class="skill_item wow fadeInUp">
+            <div class="skill_img">
+              <!-- <img src="./images/coding.png" alt=""> -->
+              <i class="fa-solid fa-code font_awesome2"></i>
+            </div>
+            <div class="skill_texts">
+              <h3 class="skill_tit">習得スキル<br>利用可能ツール</h3>
+              <p class="skill_text">WordPress、HTML/CSS、Sass、JavaScript、Node.js、Gulp、Movable Type、Git、Backlog、SourceTree</p>
             </div>
           </div>
 
@@ -301,7 +278,7 @@
                 </h3>
               </div>
               <div class="about_text wow fadeInUp">
-                <p>長年営業の世界で生きてきましたが、30歳の時にもともと興味があったWebの世界に挑戦し転職しました。<br><br>今はさらに自由なライフスタイルを実現するため、フリーランスとしても本格的に活動しています。<br><br>仕事で意識していることは、ホウレンソウとレスポンスの速さ。<br>丁寧かつ迅速な対応で、お客様が思い描くモノを速くそして確実に届けるのが僕の仕事でパフォーマンスです。</p>
+                <p>長年営業の世界で生きてきましたが、30歳の時にもともと興味があったWebの世界へ挑戦し転職しました。<br><br>今はさらに自由なライフスタイルを実現するため、フリーランスとしても本格的に活動しています。<br><br>仕事でのモットーは、信頼とレスポンスの速さ。<br>報連相を徹底することでお客様の信頼を得て、迅速かつ丁寧な対応でお客様が形にしたいものをいち早くお届け致します。</p>
               </div>
               <div class="about_camel wow fadeInUp">
                 <div class="camel_tit">
@@ -310,7 +287,7 @@
                 <div class="camel_text">
                   <p>
                     CAMEL = 「ラクダ」<br>
-                    母親が営んでいる美容室の名前が「CAMEL」で、物心がついた時から自分がなにか立ち上げた時は、この名前を引き継ぎたいとひそかに思っていました。<br>そして奇遇ながらコーディングでは”camel case”という名前のルールも存在します。<br><br>この度、フリーランス活動をするにあたり個人事業主としても独立する予定で、この「CAMEL」を掲げ活動していきます。
+                    母親が美容師で、お店の名前が「CAMEL」。<br>物心がついた頃から、”この名前を引き継ぎたい”とひそかに思っていました。<br>しかも偶然にもコーディングの世界では”camel case”という命名ルールもあり、なにか繋がりを感じています。<br><br>この度フリーランス活動をするにあたり個人事業主としても独立する予定で、この「CAMEL」という名前を掲げ活動していきます。
                   </p>
                 </div>
 
