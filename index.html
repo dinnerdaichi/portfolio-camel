@@ -29,7 +29,7 @@
   <meta property="og:title" content="Daichiのポートフォリオ" />
   <!-- <meta property="og:description" content="営業用のポートフォリオ" /> -->
   <meta property="og:image" content="http://daichan-design.com/images/profile.PNG" />
-  <script src="https://kit.fontawesome.com/b2fc223adf.js" crossorigin="anonymous"></script>
+
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 
 
@@ -39,12 +39,12 @@
 
   <div class="logo_fadein">
 
-    <p><img src="images/camel.png" alt=""></p>
+    <p><img src="images/camel.png" alt="" fetchpriority="high"></p>
   </div>
 
-  <div class="loading">
+  <!-- <div class="loading">
     <img src="images/camel.png" alt="">
-  </div>
+  </div> -->
 
   <!-- Loader -->
   <div class="sp_back"></div>
@@ -97,12 +97,14 @@
             </ul>
           </div>
         </div>
+
         <div class="main_img">
-<picture>
-  <source srcset="./images/header_img.jpg" media="(min-width: 481px)" />
-  <img src="./images/header_img_sp.jpg" alt="">
-</picture>
+          <picture>
+            <source srcset="./images/header_img.jpg" media="(min-width: 481px)" />
+            <img src="./images/header_img_sp.jpg" alt="">
+          </picture>
         </div>
+
         <div class="main_title">
           <p class="main_title_l wow fadeInUp" data-wow-duration="10s">Daichi</p>
           <p class="main_title_s wow fadeInUp" data-wow-duration="10s">Web creater & designer</p>
@@ -143,7 +145,7 @@
 
               <div class="swiper-slide swiper_modal3">
                 <a href="https://politeliving2022.com/homepage/" target="_blank">
-                  <img src="./images/works/politeliving02.png" alt="">
+                  <img src="./images/works/politeliving02.png" alt="" fetchpriority="high">
                   <div class="swiper_p">
                     <p>「politeliving」様（ココナラにて受注）
                     </p>
@@ -157,13 +159,13 @@
 
               <div class="swiper-slide">
 
-                  <img src="./images/works/mysite02.png" alt="">
-                  <div class="swiper_p">
-                    <p>当サイト</p>
-                  </div>
-                  <div class="swiper_p_sub">
-                    <p>HTML/CSS、jQuery</p>
-                  </div>
+                <img src="./images/works/mysite02.png" alt="" fetchpriority="high">
+                <div class="swiper_p">
+                  <p>当サイト</p>
+                </div>
+                <div class="swiper_p_sub">
+                  <p>HTML/CSS、jQuery</p>
+                </div>
 
               </div>
 
@@ -391,6 +393,7 @@
   <script>
     new WOW().init();
   </script>
+  <script src="https://kit.fontawesome.com/b2fc223adf.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
