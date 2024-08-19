@@ -394,6 +394,7 @@ header {
 @media screen and (max-width: 480px) {
   .main_img img {
     height: 100vh;
+    max-height: 800px;
     -o-object-fit: cover;
        object-fit: cover;
   }

@@ -451,6 +451,7 @@ header {
 
     @media screen and (max-width: 480px){
       height: 100vh;
+      max-height: 800px;
       object-fit: cover;
     }
   }
