@@ -103,6 +103,17 @@ body {
   width: 100%;
   z-index: 999;
 }
+@media screen and (max-width: 480px) {
+  .logo_fadein {
+    height: 100vh;
+  }
+}
+@media screen and (max-width: 480px) {
+  .logo_fadein img {
+    width: 100px;
+    height: 100px;
+  }
+}
 
 .logo_fadein p {
   position: fixed;
@@ -113,6 +124,12 @@ body {
   display: none;
   z-index: 9999;
   width: 280px;
+}
+@media screen and (max-width: 480px) {
+  .logo_fadein p {
+    margin: 0 auto;
+    text-align: center;
+  }
 }
 
 .hide {
@@ -738,7 +755,7 @@ header {
       footer
 =============================*/
 footer {
-  background-color: rgba(129, 173, 220, 0.568627451);
+  background-color: rgb(129, 173, 220);
   height: 100px;
   width: 100%;
   display: -webkit-box;

@@ -130,6 +130,19 @@ body {
   height: 100%;
   width: 100%;
   z-index: 999;
+@media screen and (max-width: 480px){
+// top: 50%;
+// left: 50%;
+height: 100vh;
+
+}
+
+  img{
+    @media screen and (max-width: 480px){
+      width: 100px;
+      height: 100px;
+    }
+  }
 }
 
 .logo_fadein p {
@@ -140,6 +153,11 @@ body {
   display: none;
   z-index: 9999;
   width: 280px;
+
+  @media screen and (max-width: 480px){
+    margin: 0 auto;
+    text-align: center;
+  }
 }
 
 
@@ -863,7 +881,7 @@ header {
 =============================*/
 
 footer {
-  background-color: $base2;
+  background-color: rgb(129 173 220);
   height: 100px;
   width: 100%;
   display: flex;
