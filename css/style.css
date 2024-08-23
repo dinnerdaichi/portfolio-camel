@@ -969,3 +969,32 @@ footer {
     margin-top: 10px;
   }
 }
+.work-page {
+  width: 60%;
+  margin: 0 auto;
+}
+.work-page__item {
+  margin-top: 200px;
+}
+.work-page__item:first-child {
+  margin-top: 100px;
+}
+.work-page ul {
+  padding: 0;
+}
+.work-page li {
+  list-style: none;
+}
+.work-page__ttl {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 30px 0;
+}
+.work-page__text {
+  margin-top: 20px;
+  line-height: 2rem;
+}
+
+.work-page.main {
+  height: 100px;
+}
