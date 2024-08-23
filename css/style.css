@@ -970,7 +970,6 @@ footer {
   }
 }
 .work-page {
-  width: 60%;
   margin: 0 auto;
 }
 .work-page__item {
@@ -978,6 +977,10 @@ footer {
 }
 .work-page__item:first-child {
   margin-top: 100px;
+}
+.work-page__item img {
+  -webkit-box-shadow: 3px 3px 8px rgba(128, 128, 128, 0.323);
+          box-shadow: 3px 3px 8px rgba(128, 128, 128, 0.323);
 }
 .work-page ul {
   padding: 0;

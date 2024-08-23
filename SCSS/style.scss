@@ -1114,7 +1114,7 @@ footer {
 // work-page
 
 .work-page {
-  width: 60%;
+  // width: 60%;
   margin: 0 auto;
 
   &__item{
@@ -1122,6 +1122,10 @@ footer {
 
     &:first-child{
       margin-top: 100px;
+    }
+
+    img{
+      box-shadow: 3px 3px 8px rgba(128, 128, 128, 0.323);
     }
   }
 
