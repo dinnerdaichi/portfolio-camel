@@ -206,13 +206,12 @@ h3 {
 
 a {
   text-decoration: none;
-  color: black;
+  color: rgb(77, 77, 77);
   transition: all 0.1s ease 0s;
 }
 
 a:hover {
   opacity: 0.7;
-  font-size: 1.1em;
 }
 
 .section {
@@ -1118,7 +1117,7 @@ footer {
   margin: 0 auto;
 
   &__item{
-    margin-top: 200px;
+    margin-top: 120px;
 
     &:first-child{
       margin-top: 100px;
