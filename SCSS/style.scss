@@ -913,201 +913,56 @@ footer {
     swiper
 =============================*/
 
-.swiper-wrapper{
-  position: relative;
-  z-index: 90;
-}
-.swiper {
-  padding: 8px !important;
 
 
+/* ---------------------------------------------------
+ * work
+/* ---------------------------------------------------*/
+
+li{
+  list-style: none;
 }
 
-.swiper_modal1{
-  position: relative;
-  z-index: 98;
-}
-.swiper-slide {
-  position: relative;
-  img {
-    border-radius: 15px;
-  }
-}
+.work__list{
 
-.swiper_contents {
   margin-top: 50px;
-  position: relative;
-}
 
-.swiper-button-next,
-.swiper-button-prev {
-  color: #81ccdc !important;
-}
-
-.swiper-pagination-bullet-active {
-  background-color: $base !important;
-}
-
-.swiper-slide-next {
-  opacity: 0.5;
-}
-
-.swiper-slide-prev {
-  opacity: 0.5;
-}
-
-.swiper_p_sub {
-  margin-top: 5px;
-
-  p {
-    font-size: 12px;
-  }
-}
-
-.swiper-pagination-bullets {
-  bottom: 0 !important;
-}
+  ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+    padding: 0;
 
 
-// modal-------------------------------------------
-
- .modal_back {
-   display: none;
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   z-index: 99;
-   background-color: #6d6d6db5;
- }
-
- .modal1,
- .modal2 {
-   display: none;
-   width: 100%;
-   height: 100%;
-   position: absolute;
-   top: 0;
-   left: 0;
-   color: white;
-   padding: 30px 30px 0;
-   z-index: 100;
-
-   p {
-     line-height: 1.3rem;
-   }
-
-
-
-   a {
-     display: block;
-     color: white;
-     margin-top: 20px;
-     margin: 0 auto;
-     width: 30%;
-     text-align: center;
-
-   }
- }
-
- .modal-icon {
-   display: block;
-   margin: 28px auto 0;
-   text-align: center;
-   font-size: 40px;
- }
-
- .close {
-   display: block;
-   margin: 0 auto;
-   font-size: 40px;
-   position: absolute;
-   top: 10px;
-   right: 10px;
-   z-index: 100;
-   width: 30px;
-   height: 30px;
- }
-
- .demo {
-   display: block;
-   text-align: center;
-   width: 100%;
-   font-weight: bold;
-   font-size: 20px;
-   margin-top: 10px;
- }
-@media screen and (max-width: 480px) {
-
-  .modal_back{
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 99;
-    background-color: #6d6d6db5;
-  }
-  .modal1,.modal2 {
-    display: none;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: white;
-    padding: 30px 30px 0;
-    z-index: 100;
-
-    p{
-      line-height: 1.3rem;
-    }
-
-
-
-    a {
+    @media screen and (max-width: 480px){
       display: block;
-      color: white;
-      margin-top: 20px;
-      margin: 0 auto;
-      width: 30%;
-      text-align: center;
 
     }
   }
 
-  .modal-icon {
-    display: block;
-    margin: 28px auto 0;
-    text-align: center;
-    font-size: 40px;
-  }
+  li{
+    box-shadow: 1px 1px 3px #bbbbbb;
+    // height: 200px;
+    // overflow: hidden;
 
-  .close {
-    display: block;
-    margin: 0 auto;
-    font-size: 40px;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    z-index: 100;
-    width: 30px;
-    height: 30px;
-  }
+    @media screen and (max-width: 480px) {
+        margin-top: 50px;
 
-  .demo {
-    display: block;
-    text-align: center;
-    width: 100%;
-    font-weight: bold;
-    font-size: 20px;
-    margin-top: 10px;
-  }
+      }
 
+
+    img{
+
+      // object-fit: cover;
+    }
+
+
+  }
 
 }
+
+
+
 
 
 // work-page
@@ -1119,12 +974,18 @@ footer {
   &__item{
     margin-top: 120px;
 
+    @media screen and (max-width: 480px) {
+       margin-top: 90px;
+
+      }
+
     &:first-child{
       margin-top: 100px;
     }
 
     img{
       box-shadow: 3px 3px 8px rgba(128, 128, 128, 0.323);
+      height: 100%;
     }
   }
 

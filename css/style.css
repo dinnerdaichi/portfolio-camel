@@ -790,182 +790,34 @@ footer {
 /*===========================
     swiper
 =============================*/
-.swiper-wrapper {
-  position: relative;
-  z-index: 90;
+/* ---------------------------------------------------
+ * work
+/* ---------------------------------------------------*/
+li {
+  list-style: none;
 }
 
-.swiper {
-  padding: 8px !important;
-}
-
-.swiper_modal1 {
-  position: relative;
-  z-index: 98;
-}
-
-.swiper-slide {
-  position: relative;
-}
-.swiper-slide img {
-  border-radius: 15px;
-}
-
-.swiper_contents {
+.work__list {
   margin-top: 50px;
-  position: relative;
 }
-
-.swiper-button-next,
-.swiper-button-prev {
-  color: #81ccdc !important;
+.work__list ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 40px;
+  padding: 0;
 }
-
-.swiper-pagination-bullet-active {
-  background-color: rgba(129, 204, 220, 0.568627451) !important;
-}
-
-.swiper-slide-next {
-  opacity: 0.5;
-}
-
-.swiper-slide-prev {
-  opacity: 0.5;
-}
-
-.swiper_p_sub {
-  margin-top: 5px;
-}
-.swiper_p_sub p {
-  font-size: 12px;
-}
-
-.swiper-pagination-bullets {
-  bottom: 0 !important;
-}
-
-.modal_back {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 99;
-  background-color: rgba(109, 109, 109, 0.7098039216);
-}
-
-.modal1,
-.modal2 {
-  display: none;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  color: white;
-  padding: 30px 30px 0;
-  z-index: 100;
-}
-.modal1 p,
-.modal2 p {
-  line-height: 1.3rem;
-}
-.modal1 a,
-.modal2 a {
-  display: block;
-  color: white;
-  margin-top: 20px;
-  margin: 0 auto;
-  width: 30%;
-  text-align: center;
-}
-
-.modal-icon {
-  display: block;
-  margin: 28px auto 0;
-  text-align: center;
-  font-size: 40px;
-}
-
-.close {
-  display: block;
-  margin: 0 auto;
-  font-size: 40px;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  z-index: 100;
-  width: 30px;
-  height: 30px;
-}
-
-.demo {
-  display: block;
-  text-align: center;
-  width: 100%;
-  font-weight: bold;
-  font-size: 20px;
-  margin-top: 10px;
-}
-
 @media screen and (max-width: 480px) {
-  .modal_back {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 99;
-    background-color: rgba(109, 109, 109, 0.7098039216);
-  }
-  .modal1, .modal2 {
-    display: none;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: white;
-    padding: 30px 30px 0;
-    z-index: 100;
-  }
-  .modal1 p, .modal2 p {
-    line-height: 1.3rem;
-  }
-  .modal1 a, .modal2 a {
+  .work__list ul {
     display: block;
-    color: white;
-    margin-top: 20px;
-    margin: 0 auto;
-    width: 30%;
-    text-align: center;
   }
-  .modal-icon {
-    display: block;
-    margin: 28px auto 0;
-    text-align: center;
-    font-size: 40px;
-  }
-  .close {
-    display: block;
-    margin: 0 auto;
-    font-size: 40px;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    z-index: 100;
-    width: 30px;
-    height: 30px;
-  }
-  .demo {
-    display: block;
-    text-align: center;
-    width: 100%;
-    font-weight: bold;
-    font-size: 20px;
-    margin-top: 10px;
+}
+.work__list li {
+  -webkit-box-shadow: 1px 1px 3px #bbbbbb;
+          box-shadow: 1px 1px 3px #bbbbbb;
+}
+@media screen and (max-width: 480px) {
+  .work__list li {
+    margin-top: 50px;
   }
 }
 .work-page {
@@ -974,12 +826,18 @@ footer {
 .work-page__item {
   margin-top: 120px;
 }
+@media screen and (max-width: 480px) {
+  .work-page__item {
+    margin-top: 90px;
+  }
+}
 .work-page__item:first-child {
   margin-top: 100px;
 }
 .work-page__item img {
   -webkit-box-shadow: 3px 3px 8px rgba(128, 128, 128, 0.323);
           box-shadow: 3px 3px 8px rgba(128, 128, 128, 0.323);
+  height: 100%;
 }
 .work-page ul {
   padding: 0;
