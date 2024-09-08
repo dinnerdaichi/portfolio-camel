@@ -872,7 +872,7 @@ li {
   }
 }
 .work-page {
-  margin: 0 auto;
+  margin: 100px auto 0;
 }
 .work-page__item {
   margin-top: 120px;
@@ -907,5 +907,5 @@ li {
 }
 
 .work-page.main {
-  height: 100px;
+  height: 120px;
 }
