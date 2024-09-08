@@ -29,7 +29,7 @@ $breakpoints: (
 body {
   font-family: 'Noto Sans JP', sans-serif;
   overflow-x: hidden;
-  padding-top: 100px;
+  // padding-top: 100px;
   position: relative;
 
 }
@@ -72,6 +72,26 @@ body {
     text-align: center;
 
   }
+}
+
+.pc{
+  display: block;
+
+  @media screen and (max-width: 480px){
+    display: none;
+
+  }
+
+
+}
+
+.sp{
+  display: none;
+
+  @media screen and (max-width: 480px) {
+      display: block;
+
+    }
 }
 
 .modal-icon {
@@ -219,6 +239,11 @@ a:hover {
   margin: 100px 0 0;
 }
 
+.section.main{
+  margin: 0;
+  height: 100vh;
+}
+
 @media screen and (max-width: 480px) {
   .section {
     width: 100%;
@@ -259,10 +284,22 @@ header {
   left: 0;
   width: 100%;
   z-index: 100;
+  height: 120px;
+  // transition: all 1s 0s ease ;
+
+  @include mq('sp') {
+      height: 0;
+    }
+}
+
+header.active{
+  // box-shadow: 0px -3px 10px #d7d7d7;
+  // background-color: white;
+  // opacity: 0.9;
 }
 
 .header_inner {
-  padding: 20px 150px;
+  // padding: 20px 150px;
 
   @include mq('sp'){
     padding: 20px 20px;
@@ -275,8 +312,15 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100px;
-  padding: 10px;
+  height: 100%;
+  max-width: 1080px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0px 150px;
+
+  @media screen and (max-width: 480px){
+    display: none;
+  }
 }
 
 .header_logo {
@@ -290,15 +334,17 @@ header {
 .nav_items {
   display: flex;
   justify-content: flex-end;
+  margin: 0;
+  padding: 0;
 
 }
 
 .nav_item {
   list-style: none;
-  // margin-left: 30px;
-  padding: 10px;
-  width: 90px;
-  height: 44px;
+
+  a{
+    padding: 20px;
+  }
 }
 
 
@@ -312,6 +358,9 @@ header {
   margin-bottom: 330px;
   position: relative;
 
+  background-image: url("../images/header_img.jpg");
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .main_contents {
@@ -346,6 +395,7 @@ header {
 
   .main {
     overflow: hidden;
+  background-attachment: unset;
   }
 
   .sp_header {
@@ -436,6 +486,7 @@ header {
 }
 
 .main_img {
+  display: none;
   overflow: hidden;
   width: 500px;
   max-width: 500px;
@@ -459,6 +510,8 @@ header {
 .main_title {
   position: absolute;
   top: 300px;
+  color: white;
+  text-shadow: 3px 3px 6px #292929;
 }
 
 .main_title_l {
@@ -498,7 +551,7 @@ header {
 
   .main_title {
     padding: 20px;
-    position: static;
+    // position: static;
   }
 
   .main_title_l {

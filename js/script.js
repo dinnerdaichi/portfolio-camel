@@ -15,6 +15,15 @@ $(function () {
     $(".sp_back").removeClass('active');
   });
 
+  window.addEventListener("scroll", function () {
+    const elm = document.querySelector("header");
+    const scroll = window.pageYOffset;
+    if (scroll > 500) {
+      elm.classList.add("active");
+    } else {
+      elm.classList.remove("active");
+    }
+  });
 
 
 
@@ -36,56 +45,56 @@ $(function () {
   });
 
 
-  // modal
-$(".swiper_modal1").click(function () {
-  $(".modal1,.modal_back").fadeIn();
-});
+//   // modal
+// $(".swiper_modal1").click(function () {
+//   $(".modal1,.modal_back").fadeIn();
+// });
 
-$(".close1").click(function () {
-  $(".modal1,.modal_back").fadeOut();
-});
+// $(".close1").click(function () {
+//   $(".modal1,.modal_back").fadeOut();
+// });
 
-$(".swiper_modal2").click(function () {
-  $(".modal2,.modal_back").fadeIn();
-});
+// $(".swiper_modal2").click(function () {
+//   $(".modal2,.modal_back").fadeIn();
+// });
 
-$(".close2").click(function () {
-  $(".modal2,.modal_back").fadeOut();
-});
+// $(".close2").click(function () {
+//   $(".modal2,.modal_back").fadeOut();
+// });
 
-$(".swiper_modal3").click(function () {
-  $(".modal3,.modal_back").fadeIn();
-});
+// $(".swiper_modal3").click(function () {
+//   $(".modal3,.modal_back").fadeIn();
+// });
 
-$(".close3").click(function () {
-  $(".modal3,.modal_back").fadeOut();
-});
+// $(".close3").click(function () {
+//   $(".modal3,.modal_back").fadeOut();
+// });
 
-$(document).click(function (event) {
-  var target = $(event.target);
+// $(document).click(function (event) {
+//   var target = $(event.target);
 
-  if (target.hasClass('modal1')) {
-    $(".modal1,.modal_back").fadeOut();
-  }
+//   if (target.hasClass('modal1')) {
+//     $(".modal1,.modal_back").fadeOut();
+//   }
 
-  if (target.hasClass('modal2')) {
-    $(".modal2,.modal_back").fadeOut();
-  }
+//   if (target.hasClass('modal2')) {
+//     $(".modal2,.modal_back").fadeOut();
+//   }
 
-  if (target.hasClass('modal3')) {
-    $(".modal3,.modal_back").fadeOut();
-  }
+//   if (target.hasClass('modal3')) {
+//     $(".modal3,.modal_back").fadeOut();
+//   }
 
-  if (target.hasClass('close')) {
-    $(".modal1,.modal_back").fadeOut();
-  }
-  if (target.hasClass('close')) {
-    $(".modal2,.modal_back").fadeOut();
-  }
-  if (target.hasClass('close')) {
-    $(".modal3,.modal_back").fadeOut();
-  }
-});
+//   if (target.hasClass('close')) {
+//     $(".modal1,.modal_back").fadeOut();
+//   }
+//   if (target.hasClass('close')) {
+//     $(".modal2,.modal_back").fadeOut();
+//   }
+//   if (target.hasClass('close')) {
+//     $(".modal3,.modal_back").fadeOut();
+//   }
+// });
 
 
 
