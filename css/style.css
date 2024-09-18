@@ -51,7 +51,7 @@ body {
 .pc {
   display: block;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
   .pc {
     display: none;
   }
@@ -60,7 +60,7 @@ body {
 .sp {
   display: none;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
   .sp {
     display: block;
   }
@@ -121,12 +121,12 @@ body {
   width: 100%;
   z-index: 999;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
   .logo_fadein {
     height: 100vh;
   }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
   .logo_fadein img {
     width: 100px;
     height: 100px;
@@ -143,7 +143,7 @@ body {
   z-index: 9999;
   width: 280px;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
   .logo_fadein p {
     margin: 0 auto;
     text-align: center;
@@ -154,7 +154,7 @@ body {
   display: none;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
   body {
     padding-top: 0;
   }
@@ -170,7 +170,7 @@ body {
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
   .inner {
     padding: 0 20px;
   }
@@ -208,7 +208,7 @@ a:hover {
   height: 100vh;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
   .section {
     width: 100%;
     margin: 80px 0 0;
@@ -221,7 +221,7 @@ a:hover {
   font-size: 50px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
   .title {
     font-size: 30px;
   }
@@ -279,7 +279,7 @@ header.active a {
   margin: 0 auto;
   padding: 0px 150px;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
   .header_contents {
     display: none;
   }
@@ -350,7 +350,7 @@ header.active a {
   transition: 0.5s;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
   .main {
     overflow: hidden;
     background-attachment: unset;
@@ -440,7 +440,7 @@ header.active a {
   -webkit-animation: animationZoom 30s ease-in-out infinite;
           animation: animationZoom 30s ease-in-out infinite;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
   .main_img img {
     height: 100vh;
     max-height: 800px;
@@ -484,7 +484,7 @@ header.active a {
   margin-top: 10px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
   .main {
     margin-bottom: 80px;
     margin-top: 0;
@@ -530,7 +530,7 @@ header.active a {
   margin: 10px 0 0;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
   .main_message {
     width: 100%;
     font-size: 15px;
@@ -658,7 +658,7 @@ header.active a {
   margin-top: 20px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
   .skill_items {
     width: 100%;
   }
@@ -764,7 +764,7 @@ header.active a {
   letter-spacing: 1.4px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
   .about_text p,
   .camel_text p {
     letter-spacing: 0px;
@@ -794,7 +794,7 @@ header.active a {
   margin-top: 30px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
   .twitter {
     padding: 0 0 50px;
   }
@@ -857,7 +857,7 @@ li {
   grid-gap: 40px;
   padding: 0;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
   .work__list ul {
     display: block;
   }
@@ -866,7 +866,7 @@ li {
   -webkit-box-shadow: 1px 1px 3px #bbbbbb;
           box-shadow: 1px 1px 3px #bbbbbb;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
   .work__list li {
     margin-top: 50px;
   }
@@ -877,7 +877,7 @@ li {
 .work-page__item {
   margin-top: 120px;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
   .work-page__item {
     margin-top: 90px;
   }
