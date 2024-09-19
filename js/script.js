@@ -25,6 +25,19 @@ $(function () {
     }
   });
 
+ let previousScroll = 0;
+ window.addEventListener("scroll", function () {
+   const elm = document.querySelector(".camel__img");
+   const scroll = window.pageYOffset;
+   if (scroll < previousScroll) {
+     elm.classList.add("active");
+   } else {
+     elm.classList.remove("active");
+   }
+   previousScroll = scroll;
+ });
+
+
 
 
   $(document).ready(function () {

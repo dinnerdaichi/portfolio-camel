@@ -360,6 +360,13 @@
   </section>
   <!-- contact -->
 
+  <section class="camel pc">
+    <img src="./images/camel.png" alt="" class="camel__img"data-wow-iteration='8'>
+  </section>
+  <section class="pizza pc">
+  <i class="fas fa-pizza-slice pizza__icon"></i>
+  </section>
+
 
   <!-- footer -->
   <footer>
@@ -383,6 +390,18 @@
     new WOW().init();
   </script>
   <script src="https://kit.fontawesome.com/b2fc223adf.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.3.2/dist/confetti.browser.min.js"></script>
+  <script>
+    window.addEventListener('scroll', function () {
+      if (window.innerWidth > 768 && window.scrollY + window.innerHeight >= document.body.offsetHeight) {
+        confetti({
+          particleCount: 100,
+          spread: 70,
+          origin: {x:0.95, y: 1 }
+        });
+      }
+    });
+  </script>
 </body>
 
 </html>

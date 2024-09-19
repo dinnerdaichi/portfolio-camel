@@ -77,7 +77,6 @@ body {
 
 .pc{
   display: block;
-
   @media screen and (max-width: 767px){
     display: none;
 
@@ -232,7 +231,7 @@ a {
 }
 
 a:hover {
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 .section {
@@ -947,6 +946,8 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  z-index: -100;
 }
 
 
@@ -1023,6 +1024,20 @@ li{
 
 }
 
+.work__item{
+
+  overflow: hidden;
+  img{
+transition: transform .6s ease;
+  /* ゆっくり変化させる */
+  }
+
+  img:hover{
+    transform: scale(1.1);
+      /* 拡大 */
+  }
+}
+
 
 
 
@@ -1077,4 +1092,54 @@ li{
 
 .work-page.main{
   height: 120px;
+}
+
+
+/* ---------------------------------------------------
+ * camel
+/* ---------------------------------------------------*/
+.camel{
+  animation: scrollAnime linear;
+    /* 一番上から一番下までスクロールする間にアニメーションさせる */
+    animation-timeline: scroll();
+    position: fixed;
+    bottom: 32px;
+    transform: scale(-1, 1);
+}
+
+.camel img{
+  width: 30px;
+  height: 30px;
+  position: absolute;
+
+}
+
+.camel__img.active{
+  transform: scale(-1, 1);
+}
+
+.pizza{
+  width: 100%;
+  position: fixed;
+  bottom: 30px;
+
+}
+
+
+
+.pizza__icon{
+  font-size: 25px;
+  font-family: "Font Awesome 5 Free";
+    position: absolute;
+    right: 0;
+}
+
+@keyframes scrollAnime {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 98.5%;
+  }
 }
