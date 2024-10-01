@@ -895,6 +895,9 @@ li {
 }
 .work-page__item {
   margin-top: 120px;
+  cursor: pointer;
+  overflow: hidden;
+  width: 100%;
 }
 @media screen and (max-width: 767px) {
   .work-page__item {
@@ -908,6 +911,17 @@ li {
   -webkit-box-shadow: 3px 3px 8px rgba(128, 128, 128, 0.323);
           box-shadow: 3px 3px 8px rgba(128, 128, 128, 0.323);
   height: 100%;
+  height: auto;
+  -webkit-transition: -webkit-transform 0.6s ease;
+  transition: -webkit-transform 0.6s ease;
+  transition: transform 0.6s ease;
+  transition: transform 0.6s ease, -webkit-transform 0.6s ease;
+  /* ゆっくり変化させる */
+}
+.work-page__item:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  /* 拡大 */
 }
 .work-page ul {
   padding: 0;
