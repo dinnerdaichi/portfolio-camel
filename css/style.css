@@ -899,8 +899,6 @@ li {
 }
 .work-page__item {
   margin-top: 120px;
-  cursor: pointer;
-  overflow: hidden;
   width: 100%;
 }
 @media screen and (max-width: 767px) {
@@ -926,6 +924,11 @@ li {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   /* 拡大 */
+}
+.work-page__item-img {
+  overflow: hidden;
+  -webkit-box-shadow: 3px 3px 8px rgba(128, 128, 128, 0.323);
+          box-shadow: 3px 3px 8px rgba(128, 128, 128, 0.323);
 }
 .work-page ul {
   padding: 0;
@@ -978,7 +981,7 @@ li {
   bottom: 30px;
 }
 
-.pizza__icon {
+.pizza__icon, .ice-cream {
   font-size: 25px;
   font-family: "Font Awesome 5 Free";
   position: absolute;

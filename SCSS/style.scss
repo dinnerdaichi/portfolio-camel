@@ -1,19 +1,20 @@
 // @import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&display=swap');
 
-$base:#81ccdc91;
-$base2:#81addc91;
+$base: #81ccdc91;
+$base2: #81addc91;
 
 
 $breakpoints: (
-  'sp': 'screen and (max-width: 767px)', //767px以下（スマホ）用の表示
+  'sp': 'screen and (max-width: 767px)',
+  //767px以下（スマホ）用の表示
   'pc': 'screen and (min-width: 768px)'
-) !default;
+  ) !default;
 
 @mixin mq($breakpoint: sp) {
-@media #{map-get($breakpoints,$breakpoint)} {
-@content;
-}
+  @media #{map-get($breakpoints,$breakpoint)} {
+    @content;
+  }
 }
 
 
@@ -27,7 +28,8 @@ $breakpoints: (
 }
 
 body {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Noto Sans JP',
+    sans-serif;
   overflow-x: hidden;
   // padding-top: 100px;
   position: relative;
@@ -35,7 +37,7 @@ body {
 
 }
 
-h2{
+h2 {
   margin: 0 0 10px;
 }
 
@@ -79,9 +81,10 @@ h2{
   }
 }
 
-.pc{
+.pc {
   display: block;
-  @media screen and (max-width: 767px){
+
+  @media screen and (max-width: 767px) {
     display: none;
 
   }
@@ -89,13 +92,13 @@ h2{
 
 }
 
-.sp{
+.sp {
   display: none;
 
   @media screen and (max-width: 767px) {
-      display: block;
+    display: block;
 
-    }
+  }
 }
 
 .modal-icon {
@@ -154,15 +157,16 @@ h2{
   height: 100%;
   width: 100%;
   z-index: 999;
-@media screen and (max-width: 767px){
-// top: 50%;
-// left: 50%;
-height: 100vh;
 
-}
+  @media screen and (max-width: 767px) {
+    // top: 50%;
+    // left: 50%;
+    height: 100vh;
 
-  img{
-    @media screen and (max-width: 767px){
+  }
+
+  img {
+    @media screen and (max-width: 767px) {
       width: 100px;
       height: 100px;
     }
@@ -173,15 +177,16 @@ height: 100vh;
   position: fixed;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
-  display: none;
-  z-index: 9999;
-  width: 280px;
+  transform: translate(-50%, -50%
+  );
+display: none;
+z-index: 9999;
+width: 280px;
 
-  @media screen and (max-width: 767px){
-    margin: 0 auto;
-    text-align: center;
-  }
+@media screen and (max-width: 767px) {
+  margin: 0 auto;
+  text-align: center;
+}
 }
 
 
@@ -202,7 +207,7 @@ height: 100vh;
   padding: 0 150px;
   // background-color: red;
 
-  @include mq('sp'){
+  @include mq('sp') {
     padding: 0 30px;
   }
 }
@@ -243,7 +248,7 @@ a:hover {
   margin: 100px 0 0;
 }
 
-.section.main{
+.section.main {
   margin: 0;
   height: 100vh;
 }
@@ -289,16 +294,16 @@ header {
   width: 100%;
   z-index: 100;
   height: 120px;
-  transition: all 1s 0s ease ;
+  transition: all 1s 0s ease;
 
   @include mq('sp') {
-      height: 0;
-    }
+    height: 0;
+  }
 }
 
-header.active{
+header.active {
 
-  a{
+  a {
 
     color: black;
   }
@@ -307,7 +312,7 @@ header.active{
 .header_inner {
   // padding: 20px 150px;
 
-  @include mq('sp'){
+  @include mq('sp') {
     padding: 20px 20px;
   }
 
@@ -324,7 +329,7 @@ header.active{
   margin: 0 auto;
   padding: 0px 150px;
 
-  @media screen and (max-width: 767px){
+  @media screen and (max-width: 767px) {
     display: none;
   }
 }
@@ -348,10 +353,10 @@ header.active{
 .nav_item {
   list-style: none;
 
-  a{
+  a {
     padding: 20px;
     color: white;
-    transition: all 1s 0s ease ;
+    transition: all 1s 0s ease;
   }
 }
 
@@ -405,7 +410,7 @@ header.active{
 
   .main {
     overflow: hidden;
-  background-attachment: unset;
+    background-attachment: unset;
   }
 
   .sp_header {
@@ -509,7 +514,7 @@ header.active{
 
     animation: animationZoom 30s ease-in-out infinite;
 
-    @media screen and (max-width: 767px){
+    @media screen and (max-width: 767px) {
       height: 100vh;
       max-height: 800px;
       object-fit: cover;
@@ -658,7 +663,7 @@ header.active{
   margin-top: 80px;
 
 
-  &.icon{
+  &.icon {
     margin-top: 60px;
   }
 }
@@ -699,14 +704,14 @@ header.active{
     line-height: 30px;
   }
 
-  &.icon{
+  &.icon {
     width: 100%;
   }
 }
 
 
 
-.skill__contents{
+.skill__contents {
   // display: flex;
   // justify-content: space-between;
 
@@ -714,35 +719,35 @@ header.active{
 
 }
 
-.skill__contents__flex{
+.skill__contents__flex {
   // width: 20%;
   // display: flex;
   // flex-direction: column;
   // justify-content: space-between;
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
-  grid-gap:15px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 15px;
 
-  img{
+  img {
     width: 100%;
     height: 100px;
   }
 
-  p{
+  p {
     margin-top: 10px;
     font-weight: bold;
   }
 }
 
-.skill__grid__item{
+.skill__grid__item {
   margin-top: 30px;
-      box-shadow: 1px 1px 6px #c5c5c5;
-      border-radius: 10px;
-      padding: 20px;
+  box-shadow: 1px 1px 6px #c5c5c5;
+  border-radius: 10px;
+  padding: 20px;
 
 }
 
-.etc{
+.etc {
   text-align: left;
   font-size: 2rem;
   font-weight: bold;
@@ -986,39 +991,39 @@ footer {
  * work
 /* ---------------------------------------------------*/
 
-li{
+li {
   list-style: none;
 }
 
-.work__list{
+.work__list {
 
   margin-top: 50px;
 
-  ul{
+  ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 40px;
     padding: 0;
 
 
-    @media screen and (max-width: 767px){
+    @media screen and (max-width: 767px) {
       display: block;
 
     }
   }
 
-  li{
+  li {
     box-shadow: 1px 1px 3px #bbbbbb;
     // height: 200px;
     // overflow: hidden;
 
     @media screen and (max-width: 767px) {
-        margin-top: 50px;
+      margin-top: 50px;
 
-      }
+    }
 
 
-    img{
+    img {
 
       // object-fit: cover;
     }
@@ -1028,19 +1033,23 @@ li{
 
 }
 
-.work__item{
+.work__item {
 
   overflow: hidden;
-  img{
-transition: transform .6s ease;
-  /* ゆっくり変化させる */
+
+  img {
+    transition: transform .6s ease;
+    /* ゆっくり変化させる */
   }
 
-  img:hover{
+  img:hover {
     transform: scale(1.1);
-      /* 拡大 */
+    /* 拡大 */
   }
 }
+
+
+
 
 
 
@@ -1050,62 +1059,66 @@ transition: transform .6s ease;
 
 .work-page {
   // width: 60%;
-  margin: 100px auto 0 ;
+  margin: 100px auto 0;
 
-  &__item{
+  &__item {
     margin-top: 120px;
-    cursor: pointer;
-      overflow: hidden;
-      width: 100%;
+    width: 100%;
 
     @media screen and (max-width: 767px) {
-       margin-top: 90px;
+      margin-top: 90px;
 
-      }
+    }
 
-    &:first-child{
+    &:first-child {
       margin-top: 100px;
     }
 
-    img{
+    img {
       box-shadow: 3px 3px 8px rgba(128, 128, 128, 0.323);
       height: 100%;
       height: auto;
-        transition: transform .6s ease;
-        /* ゆっくり変化させる */
+      transition: transform .6s ease;
+      /* ゆっくり変化させる */
     }
 
-    &:hover img{
+    &:hover img {
       transform: scale(1.1);
-        /* 拡大 */
+      /* 拡大 */
     }
   }
 
+  &__item-img{
+    overflow: hidden;
+      box-shadow: 3px 3px 8px rgba(128, 128, 128, 0.323);
 
-  ul{
+  }
+
+
+  ul {
     padding: 0;
 
 
   }
 
-  li{
+  li {
     list-style: none;
   }
 
-  &__ttl{
+  &__ttl {
     font-size: 20px;
     font-weight: bold;
-    margin: 30px 0 ;
+    margin: 30px 0;
   }
 
-  &__text{
+  &__text {
     margin-top: 20px;
     line-height: 2rem;
   }
 }
 
 
-.work-page.main{
+.work-page.main {
   height: 120px;
 }
 
@@ -1113,27 +1126,27 @@ transition: transform .6s ease;
 /* ---------------------------------------------------
  * camel
 /* ---------------------------------------------------*/
-.camel{
+.camel {
   animation: scrollAnime linear;
-    /* 一番上から一番下までスクロールする間にアニメーションさせる */
-    animation-timeline: scroll();
-    position: fixed;
-    bottom: 32px;
-    transform: scale(-1, 1);
+  /* 一番上から一番下までスクロールする間にアニメーションさせる */
+  animation-timeline: scroll();
+  position: fixed;
+  bottom: 32px;
+  transform: scale(-1, 1);
 }
 
-.camel img{
+.camel img {
   width: 30px;
   height: 30px;
   position: absolute;
 
 }
 
-.camel__img.active{
+.camel__img.active {
   transform: scale(-1, 1);
 }
 
-.pizza{
+.pizza {
   width: 100%;
   position: fixed;
   bottom: 30px;
@@ -1142,11 +1155,11 @@ transition: transform .6s ease;
 
 
 
-.pizza__icon{
+.pizza__icon,.ice-cream {
   font-size: 25px;
   font-family: "Font Awesome 5 Free";
-    position: absolute;
-    right: 0;
+  position: absolute;
+  right: 0;
 }
 
 @keyframes scrollAnime {
