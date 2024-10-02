@@ -12,6 +12,10 @@ body {
   color: #333;
 }
 
+h2 {
+  margin: 0 0 10px;
+}
+
 .modal_back {
   display: none;
   position: absolute;
