@@ -1,0 +1,109 @@
+@use '../foundation/variable' as v;
+@use "../foundation/mixin" as m;
+
+
+
+
+/*==================================================
+　5-2-1 3本線が×に
+===================================*/
+/*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
+
+.openbtn1 {
+  display: none;
+  position: absolute;
+  cursor: pointer;
+  width: 50px;
+  height: 100px;
+  border-radius: 5px;
+  right: 40px;
+  top: 25px;
+  z-index: 999;
+
+  @include m.mq(sp) {
+    display: block;
+    width: 40px;
+    right: 7px;
+    top: 4px;
+
+  }
+}
+
+/*ボタン内側*/
+.openbtn1 span {
+  display: inline-block;
+  transition: all .4s;
+  /*アニメーションの設定*/
+  position: absolute;
+  left: 0px;
+  height: 8px;
+  border-radius: 2px;
+  background: #cfcfcf;
+  width: 100%;
+
+  @include m.mq(sp) {
+    height: 3px;
+    width: 80%;
+  }
+}
+
+.openbtn1 span:nth-of-type(1) {
+  top: 15px;
+}
+
+.openbtn1 span:nth-of-type(2) {
+  top: 33px;
+
+  @include m.mq(sp) {
+    top: 27px;
+
+  }
+}
+
+.openbtn1 span:nth-of-type(3) {
+  top: 51px;
+
+  @include m.mq(sp) {
+    top: 39px;
+  }
+}
+
+/*activeクラスが付与されると線が回転して×に*/
+
+.openbtn1.active span:nth-of-type(1) {
+  top: 18px;
+  left: 0px;
+  transform: translateY(6px) rotate(-45deg);
+  width: 100%;
+}
+
+.openbtn1.active span:nth-of-type(2) {
+  opacity: 0;
+  /*真ん中の線は透過*/
+}
+
+.openbtn1.active span:nth-of-type(3) {
+  top: 30px;
+  left: 0px;
+  transform: translateY(-6px) rotate(45deg);
+  width: 100%;
+}
+
+.popup-bg-cover {
+  opacity: 0;
+
+  position: fixed;
+  z-index: -9999;
+
+}
+
+.popup-bg-cover.active {
+  opacity: 1;
+  position: fixed;
+  background: rgba(0, 0, 0, .5);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}

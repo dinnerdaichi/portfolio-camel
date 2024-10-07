@@ -1,0 +1,119 @@
+@use "../../foundation/variable" as v;
+@use "../../foundation/mixin" as m;
+
+
+.p-skill{
+
+
+  &__content{
+    margin-top: 50px;
+  }
+
+
+&__head{
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+&__main-wrap{
+  margin-top: 50px;
+}
+
+
+}
+
+.p-main-skill{
+
+
+  &__wrap{
+
+    display: grid;
+      /* グリッドレイアウトを適用 */
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      /* 4列の設定 */
+      gap: 20px;
+      /* 各グリッドアイテムの間のスペース */
+      padding: 30px;
+
+      @include m.mq(sp){
+        
+        padding: 0;
+      }
+
+
+  }
+
+  &__item{
+    width: 100%;
+    padding: 30px;
+    margin: 0px auto 0 ;
+    box-shadow: 1px 1px 6px #c5c5c5;
+    border-radius: 20px;
+    background-color: white;
+
+    @include m.mq(sp){
+       padding: 20px;
+    }
+  }
+
+  &__title{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+
+  &__etc{
+    text-align: left;
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-top: 25px;
+
+    @include m.mq(sp){
+       font-size: 1.6rem;
+    }
+  }
+
+
+}
+
+.p-another-skill{
+
+  &__content{
+    text-align: left;
+  }
+
+  &__item{
+    margin-top: 60px;
+  }
+
+  &__title{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+
+    @include m.mq(sp){
+       font-size: 2rem;
+    }
+  }
+
+  &__text{
+    margin-top: 10px;
+  }
+
+
+}
+
+.p-policy{
+
+  &__text-wrap{
+    margin-top: 40px;
+  }
+
+  &__text{
+    margin-top: 10px;
+    text-align: left;
+  }
+
+
+
+}

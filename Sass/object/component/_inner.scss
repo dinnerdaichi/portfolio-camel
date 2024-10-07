@@ -1,0 +1,33 @@
+@use "../../foundation/mixin" as m;
+
+
+.c-inner{
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 150px;
+
+  @include m.mq(sp){
+
+      padding: 10px 20px 30px;
+
+  }
+
+}
+
+.c-inner.l-head-inner{
+  height: 100%;
+
+  @include m.mq(sp){
+     padding: 0;;
+  }
+}
+
+.c-inner.p-mv{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+    max-width: 1080px;
+      padding: 10px 30px 30px;
+}

@@ -1,0 +1,99 @@
+@use "../../foundation/variable" as v;
+@use "../../foundation/mixin" as m;
+
+
+.p-about{
+
+
+  &__content{
+
+    margin-top: 50px;
+  }
+
+
+  &__head-flex{
+    display: flex;
+    justify-content: flex-start;
+
+    @include m.mq(sp){
+       flex-direction: column;
+    }
+  }
+
+  &__head-img{
+    width: 30%;
+
+    img{
+      border-radius: 30px;
+    }
+
+    @include m.mq(sp){
+       width: 100%;
+       padding: 0 50px;
+    }
+  }
+
+  &__head-wrap{
+    // width: 50%;
+    text-align: left;
+    padding-left: 50px;
+    padding-top: 50px;
+
+    @include m.mq(sp){
+       padding: 0;
+       margin-top: 40px;
+    }
+  }
+
+  &__head-title{
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  &__head-name{
+    font-size: 3rem;
+    font-weight: bold;;
+  }
+
+  &__head-sub-name{
+    font-size: 1.5rem;
+
+  }
+
+
+  // プロフィール
+
+  &__profile-wrap{
+    margin-top: 100px;
+    text-align: left;
+
+    @include m.mq(sp){
+       margin-top: 30px;
+    }
+  }
+
+
+  // camel
+
+  &__camel{
+    margin-top: 120px;
+
+  }
+
+  &__camel-title{
+    font-size: 3rem;
+    font-weight: bold;
+
+    @include m.mq(sp){
+       font-size: 2rem;
+    }
+  }
+
+  &__camel-text{
+    margin-top: 50px;
+
+    @include m.mq(sp){
+       margin-top: 20px;
+    }
+  }
+}

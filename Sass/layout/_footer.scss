@@ -1,0 +1,67 @@
+@use "../foundation/variable" as v;
+@use "../foundation/mixin" as m;
+
+
+.footer{
+  padding: 50px;
+  text-align: center;
+  background-color: v.$bg-light-blue;
+  background-image: url(../images/header_img.jpg);
+  background-size: cover;
+  background-blend-mode: overlay;
+
+  @include m.mq(sp){
+     padding: 20px;
+  }
+}
+
+/* ---------------------------------------------------
+ * camel
+/* ---------------------------------------------------*/
+.camel {
+  animation: scrollAnime linear;
+  /* 一番上から一番下までスクロールする間にアニメーションさせる */
+  animation-timeline: scroll();
+  position: fixed;
+  bottom: 32px;
+  transform: scale(-1, 1);
+  z-index: 111;
+}
+
+.camel img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+
+}
+
+.camel__img.active {
+  transform: scale(-1, 1);
+}
+
+.pizza {
+  width: 100%;
+  position: fixed;
+  bottom: 30px;
+
+}
+
+
+
+.pizza__icon,
+.ice-cream {
+  font-size: 25px;
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  right: 0;
+}
+
+@keyframes scrollAnime {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 98.5%;
+  }
+}

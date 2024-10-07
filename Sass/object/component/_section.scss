@@ -1,0 +1,122 @@
+@use "../../foundation/mixin" as m;
+@use "../../foundation/variable" as v;
+
+
+
+
+
+.c-section {
+  padding-top: 120px;
+  padding-bottom: 50px;
+
+  // background-color: v.$bg-light-blue;
+  text-align: center;
+  overflow: hidden;
+
+  @include m.mq(sp){
+     padding-top: 70px;
+     padding-bottom: 0;
+  }
+
+  // @include m.mq(sp){
+  //    padding-top: 40px;
+  // }
+
+  // &__head{
+  //   position: relative;
+  // }
+
+
+  // &__icon{
+  //   margin: 0 auto;
+  //   width: 48px;
+  //   height: 48px;
+  // }
+
+    &__title {
+      font-size: 12.5rem;
+      font-weight: bold;
+      text-align: left;
+      font-family: "Bungee Outline", sans-serif;
+      // border-bottom: 13px dotted #ff3b00;
+      // transform: rotate(-5deg);
+      // opacity: 0.8;
+
+      span{
+        display: inline-block;
+      }
+
+
+      @include m.mq(sp) {
+        font-size: 6rem;
+      }
+    }
+
+    &__title.orange{
+      color: #ff6a00;
+    }
+    &__title.blueviolet{
+      color: blueviolet;
+    }
+    &__title.lightseagreen{
+      color: #00f62d;
+    }
+    &__title.deeppink{
+      color: deeppink;
+    }
+    &__title.black{
+      color: #0079c1;
+    }
+    &__title.navy{
+      color: navy;
+    }
+
+&__sub-title{
+
+  font-size: 2rem;
+  text-align: left;
+  font-weight: bold;
+  // margin-top: 10px;
+  color: #ff3b00;
+  border-bottom: 13px dotted #ff3b00;
+
+}
+
+
+
+}
+
+.c-section.p-mv{
+  padding-top: 0;
+}
+
+.c-section.about{
+  padding-top: 0;
+}
+
+
+.about__section-head{
+  margin-top: 96px;
+}
+
+.section__how-to-entry{
+
+
+}
+
+.section__faq{
+  padding-top: 240px;
+
+  @include m.mq(sp){
+     padding-top: 140px;
+  }
+}
+
+.section__contact{
+  background-color: white;
+}
+
+.section__map{
+  background-color: v.$bg-light-blue;
+  padding-bottom: 240px;
+}

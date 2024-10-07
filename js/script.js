@@ -15,27 +15,37 @@ $(function () {
     $(".sp_back").removeClass('active');
   });
 
-  window.addEventListener("scroll", function () {
-    const elm = document.querySelector("header");
+  // header active
+window.addEventListener("scroll", function () {
+  const elm = document.querySelector("header");
+  const mvElm = document.querySelector(".p-mv");
+  if (mvElm) {
     const scroll = window.pageYOffset;
-    if (scroll > 500) {
+    const mvHeight = mvElm.offsetHeight - 50;
+    if (scroll > mvHeight) {
       elm.classList.add("active");
     } else {
       elm.classList.remove("active");
     }
-  });
+  }
+});
 
- let previousScroll = 0;
- window.addEventListener("scroll", function () {
-   const elm = document.querySelector(".camel__img");
-   const scroll = window.pageYOffset;
-   if (scroll < previousScroll) {
-     elm.classList.add("active");
-   } else {
-     elm.classList.remove("active");
-   }
-   previousScroll = scroll;
- });
+
+
+let previousScroll = 0;
+
+if (document.querySelector(".camel__img")) {
+  window.addEventListener("scroll", function () {
+    const elm = document.querySelector(".camel__img");
+    const scroll = window.pageYOffset;
+    if (scroll < previousScroll) {
+      elm.classList.add("active");
+    } else {
+      elm.classList.remove("active");
+    }
+    previousScroll = scroll;
+  });
+}
 
 
 
@@ -57,74 +67,78 @@ $(function () {
     return false;
   });
 
-
-//   // modal
-// $(".swiper_modal1").click(function () {
-//   $(".modal1,.modal_back").fadeIn();
-// });
-
-// $(".close1").click(function () {
-//   $(".modal1,.modal_back").fadeOut();
-// });
-
-// $(".swiper_modal2").click(function () {
-//   $(".modal2,.modal_back").fadeIn();
-// });
-
-// $(".close2").click(function () {
-//   $(".modal2,.modal_back").fadeOut();
-// });
-
-// $(".swiper_modal3").click(function () {
-//   $(".modal3,.modal_back").fadeIn();
-// });
-
-// $(".close3").click(function () {
-//   $(".modal3,.modal_back").fadeOut();
-// });
-
-// $(document).click(function (event) {
-//   var target = $(event.target);
-
-//   if (target.hasClass('modal1')) {
-//     $(".modal1,.modal_back").fadeOut();
-//   }
-
-//   if (target.hasClass('modal2')) {
-//     $(".modal2,.modal_back").fadeOut();
-//   }
-
-//   if (target.hasClass('modal3')) {
-//     $(".modal3,.modal_back").fadeOut();
-//   }
-
-//   if (target.hasClass('close')) {
-//     $(".modal1,.modal_back").fadeOut();
-//   }
-//   if (target.hasClass('close')) {
-//     $(".modal2,.modal_back").fadeOut();
-//   }
-//   if (target.hasClass('close')) {
-//     $(".modal3,.modal_back").fadeOut();
-//   }
-// });
-
-
-
-$(function () {
-  setTimeout(function () {
-    $('.logo_fadein p').fadeIn(1000);
-  }, 500);
-  setTimeout(function () {
-    $('.logo_fadein').fadeOut(500);
-  }, 2000);
-});
+  // ローディング
+  $(function () {
+    setTimeout(function () {
+      $('.logo_fadein p').fadeIn(1000);
+    }, 500);
+    setTimeout(function () {
+      $('.logo_fadein').fadeOut(500);
+    }, 2000);
+  });
 
 
 
 
+  // カーソル
+  const cursor = document.querySelector('.custom-cursor');
 
+  document.addEventListener('mousemove', (e) => {
+    gsap.to(cursor, {
+      x: e.clientX,
+      y: e.clientY,
+      duration: 1.1, // カーソルの追従速度
+      ease: "power2.out"
+    });
+  });
+  // ホバー時の色を反転させる
+  document.querySelectorAll('a').forEach(item => {
+    item.addEventListener('mouseenter', () => {
+      cursor.classList.add('cursor-inverted'); // ホバー時に色を反転
+    });
 
+    item.addEventListener('mouseleave', () => {
+      cursor.classList.remove('cursor-inverted'); // 通常時に戻す
+    });
+  });
+
+if (document.querySelector(".pContent")) {
+  gsap.to(".pContent", {
+    yPercent: -800,
+    ease: "none",
+    scrollTrigger: {
+      scrub: true
+    },
+  });
+}
+
+if (document.querySelector(".pImage")) {
+  gsap.to(".pImage", {
+    yPercent: 500,
+    ease: "none",
+    scrollTrigger: {
+      scrub: true
+    },
+  });
+}
+
+  // gsap.registerPlugin(ScrollTrigger);
+
+  // // スクロールで画像を拡大＆回転するアニメーション
+  // gsap.utils.toArray(".gsap-img").forEach(img => {
+  //   gsap.to(img, {
+  //     x:"200%",
+  //     opacity: 1, // フェードイン
+  //     // rotation: 360, // 360度回転
+  //     ease: "power1.inOut", // スムーズなアニメーション
+  //     scrollTrigger: {
+  //       trigger: img, // 各画像がトリガー
+  //       start: "top 80%", // スクロール開始位置
+  //       end: "top 20%", // スクロール終了位置
+  //       scrub: true // スクロールに連動
+  //     }
+  //   });
+  // });
 
 
 

@@ -1,0 +1,129 @@
+@use './variable' as v;
+@use "../foundation/mixin" as m;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+  color: red;
+
+  @include m.mq(sp){
+     scroll-padding-top: 0px;
+  }
+}
+
+
+body {
+  color: v.$color-black;
+  font-size: 1.6rem;
+  width: 100%;
+  overflow-x: hidden;
+  // background-color: v.$color-base;
+  font-family: "Noto Sans JP",
+    sans-serif;
+  padding: 0;
+  background-color: #f3efe7;
+  position: relative;
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: none;
+  display: block;
+}
+
+
+a {
+  color: v.$color-black;
+  text-decoration: none;
+  transition: 0.7s;
+
+  &:hover{
+    opacity: 0.8;
+  }
+}
+
+li{
+  list-style: none;
+}
+
+.inner{
+  padding: 0 30px;
+  max-width: 1084px;
+  margin: 0 auto;
+
+  @include m.mq(sp){
+     padding: 0 20px;
+  }
+}
+
+h2,h3{
+  font-family: "Syne", sans-serif;
+  font-weight: 700
+}
+
+.pc{
+  display: block;
+
+  @include m.mq(sp){
+     display: none;
+  }
+}
+
+.sp{
+  display: none;
+
+  @include m.mq(sp){
+     display: block;
+  }
+}
+
+.main{
+  margin-top: 64px;
+}
+
+.to-top{
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  bottom: 5%;
+  right: 5%;
+  z-index: 3;
+  opacity: 0;
+  transition: all 1s 0s ease ;
+
+
+}
+.to-top.show{
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  bottom: 5%;
+  right: 5%;
+  z-index: 3;
+  opacity: 1;
+
+  @include m.mq(sp) {
+      width: 75px;
+      height: 75px;
+    }
+}
+
+p{
+  line-height: 1.8em;
+  font-size: 2rem;
+
+  @include m.mq(sp){
+     font-size: 1.6rem;
+  }
+}
