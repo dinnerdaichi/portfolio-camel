@@ -67,15 +67,20 @@ if (document.querySelector(".camel__img")) {
     return false;
   });
 
-  // ローディング
-  $(function () {
+$(function () {
+  if (!sessionStorage.getItem('visited')) {
+    $('.logo_fadein').show();
     setTimeout(function () {
       $('.logo_fadein p').fadeIn(1000);
     }, 500);
     setTimeout(function () {
       $('.logo_fadein').fadeOut(500);
     }, 2000);
-  });
+    sessionStorage.setItem('visited', 'true');
+  } else {
+    $('.logo_fadein').hide();
+  }
+});
 
 
 
