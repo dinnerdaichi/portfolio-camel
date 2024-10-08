@@ -1,6 +1,4 @@
 $(function () {
-
-
   // ハンバーガーメニュー
   $(".sp_btn").click(function () {
 
@@ -30,8 +28,6 @@ window.addEventListener("scroll", function () {
   }
 });
 
-
-
 let previousScroll = 0;
 
 if (document.querySelector(".camel__img")) {
@@ -47,13 +43,9 @@ if (document.querySelector(".camel__img")) {
   });
 }
 
-
-
-
   $(document).ready(function () {
     $(".loading").addClass("hide");
   });
-
 
   // スムーススクロール
   $('a[href^="#"]').click(function () {
@@ -66,8 +58,6 @@ if (document.querySelector(".camel__img")) {
     }, speed, "swing");
     return false;
   });
-
-
 
 // $(function () {
 //   if (!sessionStorage.getItem('visited')) {
@@ -83,9 +73,6 @@ if (document.querySelector(".camel__img")) {
 //     $('.logo_fadein').hide();
 //   }
 // });
-
-
-
 
   // カーソル
   const cursor = document.querySelector('.custom-cursor');
@@ -130,8 +117,6 @@ if (document.querySelector(".pImage")) {
 }
 
   gsap.registerPlugin(ScrollTrigger);
-
-
   // スクロールで要素をピクセル指定で拡大しながら回転するアニメーション
   gsap.utils.toArray(".gsap-img").forEach((element) => {
     gsap.to(element, {
@@ -152,7 +137,6 @@ if (document.querySelector(".pImage")) {
 
   let panels = gsap.utils.toArray(".panel");
   let tops = panels.map(panel => ScrollTrigger.create({ trigger: panel, start: "top top" }));
-
   panels.forEach((panel, i) => {
     ScrollTrigger.create({
       trigger: panel,
@@ -161,12 +145,4 @@ if (document.querySelector(".pImage")) {
       pinSpacing: false
     });
   });
-
-
-  // スクロールで要素をピクセル指定で拡大しながら回転するアニメーション
-
-
-
-
-
 });
