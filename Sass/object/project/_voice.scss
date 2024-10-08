@@ -2,23 +2,40 @@
 @use "../../foundation/mixin" as m;
 
 
-.p-voice{
+.p-voice {
 
   height: 1000px;
 
 
-  &__content{
+  &__content {
     display: flex;
     justify-content: space-between;
   }
 }
 
 .gsap-img {
-      width: 100%; /* 初期の画像サイズ */
-      display: block;
-      // margin: 50px auto;
-      height: auto;
-      position: relative;
-      left: -200%;
-      opacity: 0;
-    }
+  // width: 100%; /* 初期の画像サイズ */
+  display: block;
+  // margin: 50px auto;
+  height: auto;
+  position: relative;
+  left: -200%;
+  opacity: 0;
+}
+
+.test {
+  display: flex;
+  justify-content: center;
+}
+
+.swiper-wrapper.about__swiper-wrapper {
+  transition-timing-function: linear;
+  font-family: "Bungee Outline", sans-serif;
+  // rotate: 10deg;
+
+}
+
+.swiper-slide.po{
+  font-size: 3rem;
+}
+

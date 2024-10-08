@@ -2,60 +2,73 @@
 @use "../../foundation/mixin" as m;
 
 
-.p-about{
+.p-about {
+
+  background-color: #f3e8ff;
+  position: relative;
+  border-radius: 200px 200px 0 0;
+  color: #3d0085;
+
+  @include m.mq(sp) {
+    border-radius: 70px 70px 0 0;
+
+  }
 
 
-  &__content{
+  &__content {
 
     margin-top: 50px;
   }
 
 
-  &__head-flex{
+  &__head-flex {
     display: flex;
     justify-content: flex-start;
 
-    @include m.mq(sp){
-       flex-direction: column;
+    @include m.mq(sp) {
+      flex-direction: column;
     }
   }
 
-  &__head-img{
+  &__head-img {
     width: 30%;
 
-    img{
+    img {
       border-radius: 30px;
     }
 
-    @include m.mq(sp){
-       width: 100%;
-       padding: 0 50px;
+    @include m.mq(sp) {
+      width: 100%;
+      padding: 0px 50px;
+      max-width: 300px;
+      margin-inline: auto;
     }
   }
 
-  &__head-wrap{
+  &__head-wrap {
     // width: 50%;
     text-align: left;
     padding-left: 50px;
     padding-top: 50px;
 
-    @include m.mq(sp){
-       padding: 0;
-       margin-top: 40px;
+    @include m.mq(sp) {
+      padding: 0;
+      margin-top: 40px;
     }
   }
 
-  &__head-title{
+  &__head-title {
     font-size: 2rem;
     font-weight: bold;
   }
 
-  &__head-name{
+  &__head-name {
     font-size: 3rem;
-    font-weight: bold;;
+    font-weight: bold;
+    ;
   }
 
-  &__head-sub-name{
+  &__head-sub-name {
     font-size: 1.5rem;
 
   }
@@ -63,37 +76,45 @@
 
   // プロフィール
 
-  &__profile-wrap{
+  &__profile-wrap {
     margin-top: 100px;
     text-align: left;
 
-    @include m.mq(sp){
-       margin-top: 30px;
+    @include m.mq(sp) {
+      margin-top: 30px;
     }
   }
 
 
   // camel
 
-  &__camel{
+  &__camel {
     margin-top: 120px;
+    background: white;
+    padding: 50px;
+    border-radius: 50px;
+    margin-bottom: 60px;
 
-  }
-
-  &__camel-title{
-    font-size: 3rem;
-    font-weight: bold;
-
-    @include m.mq(sp){
-       font-size: 2rem;
+    @include m.mq(sp) {
+      padding: 30px;
     }
   }
 
-  &__camel-text{
+  &__camel-title {
+    font-size: 3rem;
+    font-weight: bold;
+
+    @include m.mq(sp) {
+      font-size: 2rem;
+    }
+  }
+
+  &__camel-text {
     margin-top: 50px;
 
-    @include m.mq(sp){
-       margin-top: 20px;
+
+    @include m.mq(sp) {
+      margin-top: 20px;
     }
   }
 }

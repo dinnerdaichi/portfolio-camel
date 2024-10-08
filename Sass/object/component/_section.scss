@@ -6,7 +6,7 @@
 
 
 .c-section {
-  padding-top: 120px;
+  padding-top: 100px;
   padding-bottom: 50px;
 
   // background-color: v.$bg-light-blue;
@@ -41,9 +41,13 @@
       // border-bottom: 13px dotted #ff3b00;
       // transform: rotate(-5deg);
       // opacity: 0.8;
+      // display: flex;
+      // justify-content: flex-start;
 
       span{
         display: inline-block;
+        // width: 20%;
+        // position: relative;
       }
 
 
@@ -92,6 +96,10 @@
 
 .c-section.about{
   padding-top: 0;
+}
+
+.c-section.p-price{
+  padding-bottom: 100px;
 }
 
 

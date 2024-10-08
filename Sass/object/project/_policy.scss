@@ -1,0 +1,12 @@
+@use "../../foundation/variable" as v;
+@use "../../foundation/mixin" as m;
+
+
+.p-policy{
+
+  &__swiper{
+        margin-top: 50px;
+          position: relative;
+          z-index: -1;
+  }
+}

@@ -1,7 +1,11 @@
-// @use "../../foundation/mixin" as m;
-// @use "../../foundation/variable" as v;
+@use "../../foundation/mixin" as m;
+@use "../../foundation/variable" as v;
 
 
+.swiper-slide.po{
+    white-space: nowrap;
+    overflow: hidden;
+}
 // .swiper{
 //   width: 100%;
 // }

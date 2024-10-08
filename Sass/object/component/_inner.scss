@@ -6,6 +6,10 @@
   margin: 0 auto;
   padding: 0 150px;
 
+  @include m.mq(tab) {
+    padding: 0 100px;
+  }
+
   @include m.mq(sp){
 
       padding: 10px 20px 30px;

@@ -19,20 +19,30 @@
 
     table{
       width: 100%;
-      font-size: 2rem;
+      font-size: 1.8rem;
       font-weight: bold;
       background: white;
       border: none;
       border-radius: 30px;
 
+      @include m.mq(tab) {
+        font-size: 1.4rem;
+      }
+
       @include m.mq(sp){
-         font-size: 1.6rem;
+         font-size: 1.4rem;
+         max-width: 500px;
+         margin-inline: auto;
       }
 
 
       th,td{
         padding: 30px;
         border: none;
+
+        @include m.mq(sp){
+           padding: 30px 10px;
+        }
       }
 
       td{

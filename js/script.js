@@ -122,24 +122,41 @@ if (document.querySelector(".pImage")) {
   });
 }
 
-  // gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollTrigger);
 
-  // // スクロールで画像を拡大＆回転するアニメーション
-  // gsap.utils.toArray(".gsap-img").forEach(img => {
-  //   gsap.to(img, {
-  //     x:"200%",
-  //     opacity: 1, // フェードイン
-  //     // rotation: 360, // 360度回転
-  //     ease: "power1.inOut", // スムーズなアニメーション
-  //     scrollTrigger: {
-  //       trigger: img, // 各画像がトリガー
-  //       start: "top 80%", // スクロール開始位置
-  //       end: "top 20%", // スクロール終了位置
-  //       scrub: true // スクロールに連動
-  //     }
-  //   });
-  // });
 
+  // スクロールで要素をピクセル指定で拡大しながら回転するアニメーション
+  gsap.utils.toArray(".gsap-img").forEach((element) => {
+    gsap.to(element, {
+      x:"200%", // 幅を200pxに指定
+      opacity: 1, // フェードイン
+      // rotation: 360, // 360度回転
+      ease: "power1.out", // スムーズなアニメーション
+      scrollTrigger: {
+        trigger: element, // 各要素がトリガーになる
+        start: "top 95%", // スクロール開始位置
+        end: "top 40%", // スクロール終了位置
+        scrub: true // スクロールに連動
+      }
+    });
+  });
+
+// snap
+
+  let panels = gsap.utils.toArray(".panel");
+  let tops = panels.map(panel => ScrollTrigger.create({ trigger: panel, start: "top top" }));
+
+  panels.forEach((panel, i) => {
+    ScrollTrigger.create({
+      trigger: panel,
+      start: () => panel.offsetHeight < window.innerHeight ? "top top" : "bottom bottom", // if it's shorter than the viewport, we prefer to pin it at the top
+      pin: true,
+      pinSpacing: false
+    });
+  });
+
+
+  // スクロールで要素をピクセル指定で拡大しながら回転するアニメーション
 
 
 
