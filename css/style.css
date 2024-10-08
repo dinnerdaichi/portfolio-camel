@@ -699,6 +699,11 @@ p {
           transform: translate(-50%, -50%);
   z-index: 9999;
 }
+@media screen and (max-width:767px) {
+  .custom-cursor {
+    display: none;
+  }
+}
 
 a:hover .custom-cursor,
 button:hover .custom-cursor {
@@ -1198,9 +1203,6 @@ button:hover .custom-cursor {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   /* 拡大 */
-}
-.p-work__item:nth-child(3) img {
-  height: 100%;
 }
 
 .p-policy__swiper {
