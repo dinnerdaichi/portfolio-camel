@@ -2,7 +2,6 @@
 /*--------------------------------------*
   * foundation
 *--------------------------------------*/
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
 /* resset.dev • v5.0.2 */
 /* # =================================================================
    # Global selectors
@@ -325,6 +324,27 @@ progress {
   cursor: default;
 }
 
+@font-face {
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Noto Sans JP";
+  src: url("../fonts/NotoSansJP-Regular.woff") format("woff");
+}
+@font-face {
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+  font-family: "Noto Sans JP";
+  src: url("../fonts/NotoSansJP-Bold.woff") format("woff");
+}
+@font-face {
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Bungee Outline";
+  src: url("../fonts/BungeeOutline-Regular.woff") format("woff");
+}
 *,
 *::after,
 *::before {
