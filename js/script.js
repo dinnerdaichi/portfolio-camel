@@ -156,6 +156,7 @@ $(function () {
     text: {
       value: "少しでも良いなと思って頂けましたら、ご連絡ください&#128524;",
       padSpace: true,
+      preserveSpaces: true,
       type: "diff"
      }
   })

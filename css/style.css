@@ -1340,6 +1340,7 @@ button:hover .custom-cursor {
   .twitter p {
     font-size: 14px;
     padding: 70px;
+    letter-spacing: 1px;
   }
 }
 .p-page-work__content {
