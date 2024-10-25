@@ -14,34 +14,34 @@ $(function () {
   });
 
   // header active
-window.addEventListener("scroll", function () {
-  const elm = document.querySelector("header");
-  const mvElm = document.querySelector(".p-mv");
-  if (mvElm) {
-    const scroll = window.pageYOffset;
-    const mvHeight = mvElm.offsetHeight - 50;
-    if (scroll > mvHeight) {
-      elm.classList.add("active");
-    } else {
-      elm.classList.remove("active");
-    }
-  }
-});
-
-let previousScroll = 0;
-
-if (document.querySelector(".camel__img")) {
   window.addEventListener("scroll", function () {
-    const elm = document.querySelector(".camel__img");
-    const scroll = window.pageYOffset;
-    if (scroll < previousScroll) {
-      elm.classList.add("active");
-    } else {
-      elm.classList.remove("active");
+    const elm = document.querySelector("header");
+    const mvElm = document.querySelector(".p-mv");
+    if (mvElm) {
+      const scroll = window.pageYOffset;
+      const mvHeight = mvElm.offsetHeight - 50;
+      if (scroll > mvHeight) {
+        elm.classList.add("active");
+      } else {
+        elm.classList.remove("active");
+      }
     }
-    previousScroll = scroll;
   });
-}
+
+  let previousScroll = 0;
+
+  if (document.querySelector(".camel__img")) {
+    window.addEventListener("scroll", function () {
+      const elm = document.querySelector(".camel__img");
+      const scroll = window.pageYOffset;
+      if (scroll < previousScroll) {
+        elm.classList.add("active");
+      } else {
+        elm.classList.remove("active");
+      }
+      previousScroll = scroll;
+    });
+  }
 
   $(document).ready(function () {
     $(".loading").addClass("hide");
@@ -59,20 +59,20 @@ if (document.querySelector(".camel__img")) {
     return false;
   });
 
-// $(function () {
-//   if (!sessionStorage.getItem('visited')) {
-//     $('.logo_fadein').show();
-//     setTimeout(function () {
-//       $('.logo_fadein p').fadeIn(1000);
-//     }, 500);
-//     setTimeout(function () {
-//       $('.logo_fadein').fadeOut(500);
-//     }, 2000);
-//     sessionStorage.setItem('visited', 'true');
-//   } else {
-//     $('.logo_fadein').hide();
-//   }
-// });
+  // $(function () {
+  //   if (!sessionStorage.getItem('visited')) {
+  //     $('.logo_fadein').show();
+  //     setTimeout(function () {
+  //       $('.logo_fadein p').fadeIn(1000);
+  //     }, 500);
+  //     setTimeout(function () {
+  //       $('.logo_fadein').fadeOut(500);
+  //     }, 2000);
+  //     sessionStorage.setItem('visited', 'true');
+  //   } else {
+  //     $('.logo_fadein').hide();
+  //   }
+  // });
 
   // カーソル
   const cursor = document.querySelector('.custom-cursor');
@@ -96,31 +96,31 @@ if (document.querySelector(".camel__img")) {
     });
   });
 
-if (document.querySelector(".pContent")) {
-  gsap.to(".pContent", {
-    yPercent: -800,
-    ease: "none",
-    scrollTrigger: {
-      scrub: true
-    },
-  });
-}
+  if (document.querySelector(".pContent")) {
+    gsap.to(".pContent", {
+      yPercent: -800,
+      ease: "none",
+      scrollTrigger: {
+        scrub: true
+      },
+    });
+  }
 
-if (document.querySelector(".pImage")) {
-  gsap.to(".pImage", {
-    yPercent: 500,
-    ease: "none",
-    scrollTrigger: {
-      scrub: true
-    },
-  });
-}
+  if (document.querySelector(".pImage")) {
+    gsap.to(".pImage", {
+      yPercent: 500,
+      ease: "none",
+      scrollTrigger: {
+        scrub: true
+      },
+    });
+  }
 
   gsap.registerPlugin(ScrollTrigger);
   // スクロールで要素をピクセル指定で拡大しながら回転するアニメーション
   gsap.utils.toArray(".gsap-img").forEach((element) => {
     gsap.to(element, {
-      x:"200%", // 幅を200pxに指定
+      x: "200%", // 幅を200pxに指定
       opacity: 1, // フェードイン
       // rotation: 360, // 360度回転
       ease: "power1.out", // スムーズなアニメーション
@@ -133,7 +133,7 @@ if (document.querySelector(".pImage")) {
     });
   });
 
-// snap
+  // snap
 
   let panels = gsap.utils.toArray(".panel");
   let tops = panels.map(panel => ScrollTrigger.create({ trigger: panel, start: "top top" }));
@@ -145,4 +145,22 @@ if (document.querySelector(".pImage")) {
       pinSpacing: false
     });
   });
+
+  gsap.defaults({ ease: "none" });
+
+
+  gsap.registerPlugin(TextPlugin)
+  const tl = gsap.timeline({ repeat: -1, repeatDelay: 1, yoyo: true });
+  tl.to(".scramble", {
+    duration: 2.2,
+    text: {
+      value: "少しでも良いなと思って頂けましたら、ご連絡ください&#128524;",
+      padSpace: true,
+      type: "diff"
+     }
+  })
+
+  // const tl1 = gsap.timeline({ repeat: 0, repeatDelay: 1, yoyo: false });
+  // tl1.to(".scramble2", { duration: 3, text: "素早い対応と信頼 － つながりを大切にするWeb制作" })
+
 });
