@@ -27,7 +27,7 @@
   <meta property="og:image" content="http://daichan-design.com/images/profile.PNG">
   <!-- <meta property="og:url" content="http://daichan-design.com/"> -->
   <!-- <meta property="og:description" content="営業用のポートフォリオ"> -->
-  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print" onload="this.media='all'">
   <link href="css/reset.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
@@ -134,11 +134,8 @@
                 SassはFLOCSSで構造を整理し、保守性と拡張性を意識した設計にしています。JavaScriptでは、スムーズなスクロールや動的なコンテンツ表示を実装し、ユーザーにとって快適な操作感を提供できるようにしています。</p>
             </li>
             <li class="p-page-work__item" id="work_corporate">
-              <!-- Slider main container -->
-              <div class="swiper">
-                <!-- Additional required wrapper -->
+              <div class="swiper test">
                 <div class="swiper-wrapper">
-                  <!-- Slides -->
                   <div class="swiper-slide"><a href="https://portfolio-camel.com/corporate/" target="_blank" rel="noopener noreferrer">
                       <img src="./images/works/work_corporate.webp" alt="制作物コーポレートサイトのスライドの1枚目" loading="lazy" width="800" height="600">
                     </a></div>
@@ -146,10 +143,18 @@
                       <img src="./images/works/work_corporate02.webp" alt="制作物コーポレートサイトのスライドの2枚目" style="filter: blur(1px);" loading="lazy" width="800" height="600">
                     </a></div>
                 </div>
-                <!-- If we need navigation buttons -->
+
+
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
-                <!-- If we need scrollbar -->
+              </div>
+
+
+
+              <div class="p-page-work__item-img">
+                <a href="https://portfolio-camel.com/corporate/" target="_blank" rel="noopener noreferrer">
+                  <img src="./images/works/work_corporate.webp" alt="制作物コーポレートサイトのスライドの1枚目" loading="lazy" width="800" height="600">
+                </a>
               </div>
               <h3 class="p-page-work__title">オリジナルコーポレートサイト</h3>
               <p class="p-page-work__text">HTML,CSS / JS / WordPress</p>
@@ -219,6 +224,7 @@
       <p>Yamaguchi Daichi</p>
     </div>
 
+
   </footer>
   <!-- footer end -->
 
@@ -226,14 +232,14 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.3.2/dist/confetti.browser.min.js"></script>
   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-  <script src="js/swiper.js"></script>
+  <!-- <script src="js/swiper.js"></script> -->
   <script src="js/wow.min.js"></script>
   <script>
     new WOW().init();
   </script>
   <script src="https://kit.fontawesome.com/b2fc223adf.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.3.2/dist/confetti.browser.min.js"></script>
   <script>
     window.addEventListener('scroll', function () {
       if (window.innerWidth > 768 && window.scrollY + window.innerHeight >= document.body.offsetHeight) {
@@ -243,6 +249,25 @@
           origin: { x: 0.95, y: 1 }
         });
       }
+    });
+
+    const testswiper = new Swiper('.test', {
+      // Optional parameters
+      loop: true,
+      // spaceBetween: 20,
+      // speed: 25000,
+      gap: 20,
+      // autoplay: { // 自動再生
+      //   delay: 0, // 1秒後に次のスライド（初期値：3000）
+      // },
+      slidesPerView: 1,//見せる枚数
+      centeredSlides: true,//真ん中寄せ
+      // allowTouchMove: false,
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
     });
   </script>
 </body>

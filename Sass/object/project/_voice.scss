@@ -23,13 +23,14 @@
   opacity: 0;
 }
 
-.test {
-  display: flex;
-  justify-content: center;
-}
+// .test {
+//   display: flex;
+//   justify-content: center;
+// }
 
+// ポリシーのswiper
 .swiper-wrapper.about__swiper-wrapper {
-  transition-timing-function: linear;
+  // transition-timing-function: linear;
   font-family: "Bungee Outline", sans-serif;
   // rotate: 10deg;
 
@@ -38,4 +39,3 @@
 .swiper-slide.po{
   font-size: 3rem;
 }
-

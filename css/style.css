@@ -1444,18 +1444,7 @@ button:hover .custom-cursor {
   opacity: 0;
 }
 
-.test {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
 .swiper-wrapper.about__swiper-wrapper {
-  -webkit-transition-timing-function: linear;
-          transition-timing-function: linear;
   font-family: "Bungee Outline", sans-serif;
 }
 
