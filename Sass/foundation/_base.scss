@@ -36,7 +36,7 @@
 
 html {
   font-size: 62.5%;
-  scroll-behavior: smooth;
+  // scroll-behavior: smooth;
   scroll-padding-top: 80px;
   color: red;
 
@@ -152,4 +152,36 @@ p{
   @include m.mq(sp){
      font-size: 1.6rem;
   }
+}
+
+
+.box{
+  width: 50%;
+  margin: 0 auto;
+  position: relative;
+
+}
+/* スクロール用のダミー要素 */
+
+
+
+.wrapper {
+  overflow: hidden;
+ position: relative;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  position: relative;
+  left: 150%;
+  transform: translateX(-50%);
+}
+
+.item {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  font-size: 40px;
+  color: #fff;
 }

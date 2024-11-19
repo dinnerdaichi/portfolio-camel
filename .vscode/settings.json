@@ -1,3 +1,11 @@
 {
-  "liveServer.settings.port": 5501
+  "liveServer.settings.port": 5501,
+  "easySnippet.lintDisableHeader": {
+    "javascript": "/* eslint-disable */",
+    "typescript": "/* eslint-disable */",
+    "javascriptreact": "/* eslint-disable */",
+    "typescriptreact": "/* eslint-disable */"
+  },
+  "files.autoSave": "afterDelay",
+  "editor.formatOnSave": true
 }
