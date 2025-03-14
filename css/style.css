@@ -508,9 +508,9 @@ p {
 *--------------------------------------*/
 .l-header {
   width: 100%;
-  height: 120px;
+  height: 90px;
   position: fixed;
-  z-index: 1;
+  z-index: 3;
 }
 @media screen and (max-width:767px) {
   .l-header {
@@ -535,9 +535,7 @@ p {
   }
 }
 .l-header__logo {
-  width: 80px;
-  height: 80px;
-  /* ゆっくり変化させる */
+  width: 60px;
 }
 .l-header img {
   -webkit-filter: invert(100%);
@@ -547,6 +545,12 @@ p {
 }
 .l-header a {
   color: white;
+}
+
+.l-header.active {
+  background-color: rgba(255, 255, 255, 0.479);
+  -webkit-box-shadow: 1px 0px 4px #bfbfbf;
+          box-shadow: 1px 0px 4px #bfbfbf;
 }
 
 .l-header.active a {
@@ -1183,6 +1187,7 @@ button:hover .custom-cursor {
   /* 列の間にスペースを作成（オプション） */
   position: relative;
   height: 100%;
+  z-index: 0;
 }
 @media screen and (max-width:767px) {
   .p-work__item-flex {
